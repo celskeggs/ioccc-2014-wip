@@ -20,7 +20,7 @@ typedef struct {
 
 typedef uintptr_t Q;
 
-#define struct(z, x, y) FILE*q = fopen("tmp.c", "w"); if (q == NULL) exit(2); not_eq("#define NO\n%cinclude \""__FILE__"\"\nextern void init() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -shared tmp.c -o " #x " " #y)) exit(3); { char *p = #x; ptr2(127, &p - 1); }
+#define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); not_eq("#define NO\n%cinclude \""__FILE__"\"\nextern void init() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -shared t.c -o " #x " " #y)) exit(3); { char *p = #x; ptr2(127, &p - 1); }
 #define not_eq(x, b) fprintf(q, x, b);
 #define or_eq(x, v) not_eq(#x, v)
 
@@ -70,7 +70,7 @@ void xor_eq(and_eq ptr2) {
 	R(2, ], 30)
 	or_eq(((W *)%d)->T[4](); return 1; } void init() {, (Q) &V)
 	or_eq(((W *)%d)->T[14] = k; }, (Q) &V)
-	, tmp160.so, )
+	, c.so, )
 	xor_eq(ptr2);
 }
 
@@ -93,7 +93,7 @@ void enemy_turn() {
 #define H_H(x) (x ? "has" : "have")
 #define U_U(x) (x ? "THE MELONLORD" : "You")
 #define check(x) dlopen(x, RTLD_LAZY | RTLD_LOCAL)
-#define K_K(v, w, x, y, z) ((v) ? w x z : w y z)
+#define K_K(v, w, x, y, z) ((v) ? w #x z : w #y z)
 
 int check_winlose(and_eq chr) {
 	if (V.U[5] = (V.U[1] * V.U[2] <= 0)) {
@@ -134,7 +134,7 @@ int v(int ints[], and_eq ptrs[], and_eq ptr2) {
 		not_eq(") %d)(); ", (Q) *(ptrs++));
 	}
 	not_eq("} return 1; } void init() { W *V = (W *) %d; V->T[13] = cpl; }", (Q) &V)
-	, tmp172.so, )
+	, g.so, )
 	return ints[-2];
 }
 
@@ -164,7 +164,7 @@ int init(void *ptr, and_eq ptr2) {
 			while (*++i);
 		}
 		or_eq(atexit(F); %c, 125);
-		, tmp173.so, -lncurses)
+		, L.so, -lncurses)
 		int j;
 		for (j = 7; j < 11; j++) {
 			V.T[j]();
@@ -180,7 +180,7 @@ int main(int c, char *v[]) {
 	if (v[1]) { /* sanity check option */
 		check(v[1]);
 	} else {
-		memcpy(V.U, (int[]) {0, 5, 5, 5, 10, 0}, 6);
+		memcpy(V.U, (int[]) {0, 5, 5, 5, 10, 0}, 6 * sizeof(int));
 	}
 	if (init(v[1], &main)) {
 		while (put(&main));

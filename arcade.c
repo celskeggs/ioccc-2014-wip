@@ -30,12 +30,11 @@ W V;
 #define E(x, v, w) fprintf(q, #x, v, w);
 #define or_eq(x, v) not_eq(#x, v)
 #define R(x, z) E(restrict(d, "%%c", B(0) == x ? 126 : 32); J(3)(%d, %d, d); , o + 12, a + z)
-#define F(x) x x
 #define H "THE LEMONLORD"
 #define Q (uintptr_t)
 #define O(x) = (J(x)(V.V) - 32 / x) / 2,
 
-char M[99] = ">>> DEFEAT "H" <<<";
+char M[99] = " { { DEFEAT "H" } } ";
 
 void xor_eq(and_eq L) {
 	int a O(1) b O(2) o = b;
@@ -44,8 +43,8 @@ void xor_eq(and_eq L) {
 		return;
 	}
 	struct(
-	or_eq(int k() {V = *(W *)%d; J(0)(); J(3), Q &V)
-	char *x = "\0" F(F("--------") "-") "\0{                                } \0{                                } \0{                                } \0{                                } \0{  ==== ====          ==== ====  } \0{                                } \0{      O                  O      } \0{     /|->              <-|\\\\     } \0{      |                  |      } \0{     / \\\\                / \\\\     } \0{                                } \0{   ATTACK   REGENERATE   HEAL   } \0{                                } \0" F(F(F("----")) "-") "\0";
+	or_eq(int k() {V = *(W *)%d; J(3), Q &V)
+	char *x = "\0; ; ; ; ; ; ; ; ;; ; ; ; ; ; ; ; ; \0{                                } \0{                                } \0{                                } \0{                                } \0{  ==== ====          ==== ====  } \0{                                } \0{      O                  O      } \0{     /|-}              {-|\\\\     } \0{      |                  |      } \0{     / \\\\                / \\\\     } \0{                                } \0{   ATTACK   REGENERATE   HEAL   } \0{                                } \0; ; ; ; ; ; ; ; ;; ; ; ; ; ; ; ; ; \0";
 	while (*++x) {
 		E((%d, %d\0), b++, a)
 		not_eq(", \"%s\"); J(3)", x)
@@ -121,7 +120,7 @@ void bitor(and_eq p) {
 void bitand(and_eq L) {
 	struct(
 	or_eq(#include <ncurses/ncurses.h>\nvoid F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() { and_eq *G = A(%d) T - 1; , Q &V);
-	char *i = "\0clear\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0cbreak\0noecho\0nonl\0keypad\0";
+	char *i = "\0keypad\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0cbreak\0noecho\0nonl\0";
 	while (*++i) {
 		or_eq(*++G = (and_eq) %s; , i);
 		while (*++i);
@@ -133,7 +132,7 @@ void bitand(and_eq L) {
 	while (j < 9) {
 		J(j++)();
 	}
-	J(j)(V.V, 1);
+	J(0)(V.V, 1);
 	for (; !B(5); bitor(L));
 }
 

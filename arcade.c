@@ -14,6 +14,7 @@ typedef struct {
 #define Z "%3dh%3dMP"
 #define B(x) V.U[x]
 #define J(x) V.T[x]
+#define restrict sprintf
 
 W V;
 
@@ -26,9 +27,9 @@ W V;
 
 #define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); not_eq("#define NO\n%cinclude \""__FILE__"\"\nextern void bitand() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -shared t.c -o " #x " " #y)) exit(3); { char *p = #x; L(127, &p - 1); }
 #define not_eq(x, b) fprintf(q, x, b);
-#define or_eq(x, v) not_eq(#x, v)
 #define E(x, v, w) fprintf(q, #x, v, w);
-#define R(x, z) or_eq(sprintf(d, "%%c", B(0) == %s ? 126 : 32); J, #x) not_eq("(3)(%d,", o + 12) not_eq(" %d, d); ", a + z)
+#define or_eq(x, v) not_eq(#x, v)
+#define R(x, z) E(restrict(d, "%%c", B(0) == x ? 126 : 32); J(3)(%d, %d, d); , o + 12, a + z)
 #define F(x) x x
 #define H "THE LEMONLORD"
 #define Q (uintptr_t)
@@ -53,7 +54,7 @@ void xor_eq(and_eq L) {
 	E((%d, %d - strlen\0), o+2, a + 17)
 	E(((char*) %d) / 2 %c, Q M, 44)
 	E((char*%c %d), 41, Q M)
-	E(; char d[12]; sprintf(d, Z "          " Z, B(1), B(3), B(2), B(4)); J(3)(%d, %d, d); , o + 4, a + 3)
+	E(; char d[12]; restrict(d, Z "          " Z, B(1), B(3), B(2), B(4)); J(3)(%d, %d, d); , o + 4, a + 3)
 	R(0, 3)
 	R(0, 10)
 	R(1, 12)
@@ -69,7 +70,7 @@ int S(int c, int d) {
 	return c-- > 0 ? 1 + S(c, d) + rand() % d : 0;
 }
 
-#define Y(x) sprintf(M,#x,D)
+#define Y(x) restrict(M,#x,D)
 
 void N(and_eq d) {
 	int c = 0;

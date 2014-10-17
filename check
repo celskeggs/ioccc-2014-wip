@@ -1,0 +1,2 @@
+gcc -ansi arcade.c -o arcade.exe
+../iocccsize -i <arcade.c

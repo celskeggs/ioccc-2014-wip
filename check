@@ -1,2 +1,2 @@
-gcc -ansi arcade.c -o arcade.exe
+gcc -ansi arcade.c -o arcade.exe -Wall
 ../iocccsize -i <arcade.c

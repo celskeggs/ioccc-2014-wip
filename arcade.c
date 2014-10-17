@@ -24,8 +24,9 @@ typedef uintptr_t Q;
 #define not_eq(x, b) fprintf(q, x, b);
 #define or_eq(x, v) not_eq(#x, v)
 #define E(x, v, w) fprintf(q, #x, v, w);
-#define R(x, z) E(sprintf(data, "%%c", ((W *)%d)-> U[0] == %s ? '~' : 32);, Z, #x) or_eq(((W *)%d)->T, Z) not_eq("[3](%d,", o + 12) not_eq(" %d, data); ", a + z)
+#define R(x, z) E(sprintf(data, "%%c", ((W *)%d)-> U[0] == %s ? 126 : 32);, Z, #x) or_eq(((W *)%d)->T, Z) not_eq("[3](%d,", o + 12) not_eq(" %d, data); ", a + z)
 #define Z (Q) &V
+#define F(x) x x
 
 /*int V.U[0] = 0, V.U[1] = 30, V.U[2] = 50, V.U[3] = 5, V.U[4] = 10, V.U[5] = 0; */
 char M[64] = ">>> DEFEAT THE MELONLORD <<<";
@@ -39,7 +40,7 @@ void xor_eq(and_eq ptr2) {
 	}
 	struct(
 	E(int k(int a, int b) { if (%d != a || b != %d) { return 0; }, a, b)
-	char *x = "\0  ______________________________\0 /                              \\\\\0/                                \\\\\0|                                |\0|                                |\0|  ==== ====          ==== ====  |\0|                                |\0|      O                  O      |\0|     /|->              <-|\\\\     |\0|      |                  |      |\0|     / \\\\                / \\\\     |\0|                                |\0|   ATTACK   REGENERATE   HEAL   |\0|                                |\0----------------------------------\0";
+	char *x = "\0  " F(F("_______") "_") "\0 /                              \\\\\0/                                \\\\\0|                                |\0|                                |\0|  ==== ====          ==== ====  |\0|                                |\0|      O                  O      |\0|     /|->              <-|\\\\     |\0|      |                  |      |\0|     / \\\\                / \\\\     |\0|                                |\0|   ATTACK   REGENERATE   HEAL   |\0|                                |\0" F(F(F("----")) "-") "\0";
 	int o = b;
 	while (*++x) {
 		or_eq(((W *)%d)->, Z)
@@ -78,19 +79,9 @@ int S(int c, int d) {
 #define X(a) V.U[a] <
 #define Y(x) sprintf(M,#x,D)
 
-int D;
-
-void enemy_turn() {
-	switch (X(1) 10 ? 0 : X(2) 20 ? X(4) 2 ? !(X(3) 1) : 2 : X(4) 5 && S(1, 3) != 1 && !(X(3) 1) ? 1 : S(1, 8) > 6 ? (1 + (V.U[4] > 9 || X(3) 1)) : 0) {
-	case 0: D = S(2, 6); V.U[1] -= D; Y(You are attacked for %d HP!); break;
-	case 1: D = S(1, 4); if (V.U[3] < D) { D = V.U[3]; } V.U[3] -= D; V.U[4] += D; Y(They steal %d MP!); break;
-	case 2: D = 33; if (X(4) 2) { Y(They fail to heal%d); } else { V.U[4] -= S(1, 2); V.U[2] += D = S(3, 8); Y(They heal for %d HP!); } break;
-	}
-}
-
 #define H_H(x) (x ? "has" : "have")
 #define U_U(x) (x ? "THE MELONLORD" : "You")
-#define check(x) dlopen(x, RTLD_LAZY | RTLD_LOCAL)
+#define chk(x) dlopen(x, RTLD_LAZY | RTLD_LOCAL)
 #define K_K(v, w, x, y, z) ((v) ? w #x z : w #y z)
 
 int N(and_eq d) {
@@ -105,18 +96,22 @@ int N(and_eq d) {
 }
 
 int x(and_eq x) {
-	int u = 0;
+	int u = 0, D = 33;
 	switch (V.U[0]) {
 	case 0: D = S(2, 8); V.U[2] -= D; Y(You attack for %d HP!); break;
 	case 1: V.U[3] += D = S(1, 10); Y(You regenerate %d MP!); break;
-	case 2: D = 33; if (V.U[3] > 1) { V.U[3] -= S(1, 2); V.U[1] += D = S(3, 6); Y(You heal for %d HP!); } else { Y(You do not have enough MP%d); u = 1; } break;
+	case 2: if (V.U[3] > 1) { V.U[3] -= S(1, 2); V.U[1] += D = S(3, 6); Y(You heal for %d HP!); } else { Y(You do not have enough MP%d); u = 1; } break;
 	}
 	xor_eq(x);
 	if (!N(x) || u) {
 		return 3;
 	}
 	sleep(1);
-	enemy_turn();
+	switch (X(1) 10 ? 0 : X(2) 20 ? X(4) 2 ? !(X(3) 1) : 2 : X(4) 5 && S(1, 3) != 1 && !(X(3) 1) ? 1 : S(1, 8) > 6 ? (1 + (V.U[4] > 9 || X(3) 1)) : 0) {
+	case 0: D = S(2, 6); V.U[1] -= D; Y(You are attacked for %d HP!); break;
+	case 1: D = S(1, 4); if (V.U[3] < D) { D = V.U[3]; } V.U[3] -= D; V.U[4] += D; Y(They steal %d MP!); break;
+	case 2: D = 33; if (X(4) 2) { Y(They fail to heal%d); } else { V.U[4] -= S(1, 2); V.U[2] += D = S(3, 8); Y(They heal for %d HP!); } break;
+	}
 	xor_eq(x);
 	N(x);
 	return 2;
@@ -175,11 +170,7 @@ int init(void *ptr, and_eq ptr2) {
 }
 
 int main(int c, char *v[]) {
-	if (v[1]) { /* sanity check option */
-		check(v[1]);
-	} else {
-		memcpy(V.U, (int[]) {0, 5, 5, 5, 10, 0}, 6 * sizeof(int));
-	}
+	v[1] && chk(v[1]) || memcpy(V.U, (int[]) {0, 5, 5, 5, 10, 0}, 6 * sizeof(int));
 	if (init(v[1], &main)) {
 		while (put(&main));
 	}

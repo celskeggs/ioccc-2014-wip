@@ -1,3 +1,3 @@
 rm *.exe
-gcc -ansi arcade.c -o arcade.exe -Wall -Wno-unused-value -Wno-format-contains-nul
+gcc -ansi arcade.c $* -ldl -o arcade -Wall -Wno-unused-value -Wno-format-contains-nul
 ../iocccsize -i <arcade.c

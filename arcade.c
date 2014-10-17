@@ -25,7 +25,7 @@ W V;
 #include <stdint.h>
 #include <dlfcn.h>
 
-#define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); not_eq("%cinclude \""__FILE__"\"\nextern void bitand() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -shared t.c -o " #x " -DNO " #y)) exit(3); { char *p = #x; L(127, &p - 1); }
+#define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); not_eq("%cinclude \""__FILE__"\"\nextern void bitand() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -shared t.c -o " #x " -DNO " #y)) exit(3); { char *p = "./" #x; L(127, &p - 1); }
 #define not_eq(x, b) fprintf(q, x, b);
 #define E(x, v, w) fprintf(q, #x, v, w);
 #define or_eq(x, v) not_eq(#x, v)
@@ -43,7 +43,7 @@ void xor_eq(and_eq L) {
 		return;
 	}
 	struct(
-	E(int k() {V = *(W *)%d; char *y = (char*) %d; , Q &V, Q M)
+	E(int k() {V = *(W *)%td; char *y = (char*) %td; , Q &V, Q M)
 	or_eq(int x = %d; , a)
 	char *x = "\0; ; ; ; ; ; ; ; ;; ; ; ; ; ; ; ; ; \0{                                } \0{                                } \0{                                } \0{                                } \0{  ==== ====          ==== ====  } \0{                                } \0{      O                  O      } \0{     /|-}              {-|\\\\     } \0{      |                  |      } \0{     / \\\\                / \\\\     } \0{                                } \0{                                } \0{                                } \0; ; ; ; ; ; ; ; ;; ; ; ; ; ; ; ; ; \0";
 	while (*++x) for (E(J(3)(%d, x, "%s"); , b++, x)*++x; );
@@ -52,7 +52,7 @@ void xor_eq(and_eq L) {
 	R(2, HEAL)
 	E(J(3)(%d, %d - strlen(y) / 2, y); char d[99]; , o+2, a - 8)
 	E(restrict(d, Z "          " Z, B(1), B(3), B(2), B(4)); J(3)(%d, %d, d); , o + 4, a - 22)
-	or_eq(J(4)(); } void bitand() { A(%d)T[14] = k; }, Q &V)
+	or_eq(J(4)(); } void bitand() { A(%td)T[14] = k; }, Q &V)
 	, volatile, )
 	xor_eq(L);
 }
@@ -88,9 +88,9 @@ int v(int p[], and_eq P[], and_eq L) {
 	struct(
 	or_eq(int f(int x) { switch(%c) { , 120)
 	while (*p) {
-		E(case %d: return ((and_eq) %d)(); , r += *(p++), Q *(P++));
+		E(case %d: return ((and_eq) %td)(); , r += *(p++), Q *(P++));
 	}
-	or_eq(} return 1; } void bitand() { A(%d) T[13] = f; } , Q &V)
+	or_eq(} return 1; } void bitand() { A(%td) T[13] = f; } , Q &V)
 	, thread_local, )
 	return p[-2];
 }
@@ -111,13 +111,13 @@ void bitor(and_eq p) {
 
 void bitand(and_eq L) {
 	struct(
-	or_eq(#include <ncurses/ncurses.h>\nvoid F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() { and_eq *G = A(%d) T - 1; , Q &V);
+	or_eq(#include <ncurses.h>\nvoid F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() { puts("HELLO WORLD"); and_eq *G = A(%td) T - 1; , Q &V);
 	char *i = "\0keypad\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0cbreak\0noecho\0nonl\0";
 	while (*++i) {
 		or_eq(*++G = (and_eq) %s; , i);
 		while (*++i);
 	}
-	or_eq(initscr(); A(%d)V = stdscr; , Q &V)
+	or_eq(initscr(); A(%td)V = stdscr; , Q &V)
 	or_eq(atexit(%c); } , 70);
 	, static_assert, -lncurses)
 	int j = 6;

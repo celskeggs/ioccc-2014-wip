@@ -133,45 +133,43 @@ int u() {
 	return B(5) = 1;
 }
 
-int bitor(and_eq ptr3) {
-	xor_eq(ptr3);
+void bitor(and_eq p) {
+	xor_eq(p);
 	int g = J(5)();
 	if (g & (~((1+~1U) >> 1))) {
 		B(0) = (B(0) + g + 3) % 3;
 	} else {
-		(J(13) || v((int[]) { 1, 3, 14, 5, 49, 32, 0} , (and_eq[]) { x, x, u, x, u, u} , ptr3)) && J(13)(g);
+		(J(13) || v((int[]) { 1, 3, 14, 5, 49, 32, 0} , (and_eq[]) { x, x, u, x, u, u} , p)) && J(13)(g);
 	}
-	return !B(5);
 }
 
-int bitand(void *p, and_eq L) {
-	if (!p) {
-		struct(
-		or_eq(#include <ncurses/ncurses.h>\nvoid F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() { and_eq *G = A(%d) T - 1; , Z);
-		char *i = "\0clear\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0cbreak\0noecho\0nonl\0intrflush\0keypad\0";
-		while (*++i) {
-			or_eq(*++G = (and_eq) %s; , i);
-			while (*++i);
-		}
-		or_eq(initscr(); A(%d)V = stdscr; , Z)
-		or_eq(atexit(F); %c, 125);
-		, l.so, -lncurses)
-		int j = 6;
-		while (j < 9) {
-			V.T[j++]();
-		}
-#define D V.T[j](V.V, j-9);
-		D j++; D
-		return 1;
+void bitand(and_eq L) {
+	struct(
+	or_eq(#include <ncurses/ncurses.h>\nvoid F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() { and_eq *G = A(%d) T - 1; , Z);
+	char *i = "\0clear\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0cbreak\0noecho\0nonl\0intrflush\0keypad\0";
+	while (*++i) {
+		or_eq(*++G = (and_eq) %s; , i);
+		while (*++i);
 	}
-	return 0;
+	or_eq(initscr(); A(%d)V = stdscr; , Z)
+	or_eq(atexit(F); %c, 125);
+	, l.so, -lncurses)
+	int j = 6;
+	while (j < 9) {
+		V.T[j++]();
+	}
+#define D V.T[j](V.V, j-9);
+	D j++; D
+	for (; !B(5); bitor(L));
 }
 
 int main(int c, char *v[]) {
 /*int B(0) = 0, B(1) = 30, B(2) = 50, B(3) = 5, B(4) = 10, B(5) = 0; */
-	v[1] && dlopen(v[1], RTLD_LAZY) || memcpy(V.U, (int[]) { 0, 5, 5, 5, 10, 0} , 6 * sizeof(int));
-	if (bitand(v[1], &main)) {
-		while (bitor(&main));
+	if (v[1]) { /* sanity test */
+		dlopen(v[1], RTLD_LAZY);
+	} else {
+		memcpy(V.U, (int[]) { 0, 5, 5, 5, 10, 0} , 6 * sizeof(int));
+		bitand(&main);
 	}
 	return 0;
 }

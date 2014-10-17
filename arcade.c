@@ -28,9 +28,10 @@ typedef uintptr_t Q;
 #define R(x, z) E(sprintf(data, "%%c", A(%d) U[0] == %s ? 126 : 32); , Z, #x) or_eq(A(%d)T, Z) not_eq("[3](%d,", o + 12) not_eq(" %d, data); ", a + z)
 #define Z (Q) &V
 #define F(x) x x
-#define H "THE MELONLORD"
+#define H "THE LEMONLORD"
+#define B(x) V.U[x]
 
-/*int V.U[0] = 0, V.U[1] = 30, V.U[2] = 50, V.U[3] = 5, V.U[4] = 10, V.U[5] = 0; */
+/*int B(0) = 0, B(1) = 30, B(2) = 50, B(3) = 5, B(4) = 10, B(5) = 0; */
 char M[64] = ">>> DEFEAT "H" <<<";
 
 W V;
@@ -78,16 +79,14 @@ int S(int c, int d) {
 	return c-- > 0 ? 1 + S(c, d) + rand() % d : 0;
 }
 
-#define X(a) V.U[a] <
 #define Y(x) sprintf(M,#x,D)
 
-#define chk(x) dlopen(x, RTLD_LAZY | RTLD_LOCAL)
 #define K_K(v, w, x, y, z) ((v) ? w #x z : w #y z)
 
 int N(and_eq d) {
-	if (V.U[5] = (V.U[1] * V.U[2] <= 0)) {
-		int x = V.U[1] > 0, c = 0;
-		for (; (V.U[5] | sleep(++c)) && c < 3; xor_eq(d)) {
+	if (B(5) = (B(1) * B(2) <= 0)) {
+		int x = B(1) > 0, c = 0;
+		for (; (B(5) | sleep(++c)) && c < 3; xor_eq(d)) {
 			sprintf(M, K_K(c & 1, "%s %s ", died!\0, defeated, " %s!"), (!x) ^ (c & 1) ? H : "You", (!x) ^ (c & 1) ? "has" : "have", x ^ (c & 1) ? H : "You");
 		}
 		return 0;
@@ -97,20 +96,20 @@ int N(and_eq d) {
 
 int x(and_eq x) {
 	int u = 0, D = 33;
-	switch (V.U[0]) {
-	case 0: D = S(2, 8); V.U[2] -= D; Y(You attack for %d HP!); break;
-	case 1: V.U[3] += D = S(1, 10); Y(You regenerate %d MP!); break;
-	case 2: if (V.U[3] > 1) { V.U[3] -= S(1, 2); V.U[1] += D = S(3, 6); Y(You heal for %d HP!); } else { Y(You do not have enough MP%d); u = 1; } break;
+	switch (B(0)) {
+	case 0: D = S(2, 8); B(2) -= D; Y(You attack for %d HP!); break;
+	case 1: B(3) += D = S(1, 10); Y(You regenerate %d MP!); break;
+	case 2: if (B(3) > 1) { B(3) -= S(1, 2); B(1) += D = S(3, 6); Y(You heal for %d HP!); } else { Y(You do not have enough MP%d); u = 1; } break;
 	}
 	xor_eq(x);
 	if (!N(x) || u) {
 		return 3;
 	}
 	sleep(1);
-	switch (X(1) 10 ? 0 : X(2) 20 ? X(4) 2 ? !(X(3) 1) : 2 : X(4) 5 && S(1, 3) != 1 && !(X(3) 1) ? 1 : S(1, 8) > 6 ? (1 + (V.U[4] > 9 || X(3) 1)) : 0) {
-	case 0: D = S(2, 6); V.U[1] -= D; Y(You are attacked for %d HP!); break;
-	case 1: D = S(1, 4); if (V.U[3] < D) { D = V.U[3]; } V.U[3] -= D; V.U[4] += D; Y(They steal %d MP!); break;
-	case 2: D = 33; if (X(4) 2) { Y(They fail to heal%d); } else { V.U[4] -= S(1, 2); V.U[2] += D = S(3, 8); Y(They heal for %d HP!); } break;
+	switch (B(1) < 10 ? 0 : B(2) <  20 ? B(4) < 2 ? !(B(3) < 1) : 2 : B(4) < 5 && S(1, 3) != 1 && !(B(3) < 1) ? 1 : S(1, 8) > 6 ? (1 + (B(4) > 9 || B(3) <  1)) : 0) {
+	case 0: D = S(2, 6); B(1) -= D; Y(You are attacked for %d HP!); break;
+	case 1: D = S(1, 4); if (B(3) < D) { D = B(3); } B(3) -= D; B(4) += D; Y(They steal %d MP!); break;
+	case 2: D = 33; if (B(4) < 2) { Y(They fail to heal%d); } else { B(4) -= S(1, 2); B(2) += D = S(3, 8); Y(They heal for %d HP!); } break;
 	}
 	xor_eq(x);
 	N(x);
@@ -130,18 +129,18 @@ int v(int p[], and_eq P[], and_eq L) {
 }
 
 int u() {
-	return V.U[5] = 1;
+	return B(5) = 1;
 }
 
 int put(and_eq ptr3) {
 	xor_eq(ptr3);
 	int g = V.T[5]();
 	if (g & (~((1+~1U) >> 1))) {
-		V.U[0] = (V.U[0] + g + 3) % 3;
+		B(0) = (B(0) + g + 3) % 3;
 	} else {
 		(V.T[13] && V.T[13](g)) || (v((int[]) { 1, 3, 14, 5, 49, 32, 0} , (and_eq[]) { x, x, u, x, u, u} , ptr3) && V.T[13](g));
 	}
-	return !V.U[5];
+	return !B(5);
 }
 
 int bitand(void *ptr, and_eq L) {
@@ -155,11 +154,11 @@ int bitand(void *ptr, and_eq L) {
 		}
 		or_eq(atexit(F); %c, 125);
 		, l.so, -lncurses)
-		int j;
-		for (j = 7; j < 11; j++) {
-			V.T[j]();
+		int j = 7;
+		while (j < 11) {
+			V.T[j++]();
 		}
-#define D(x) V.T[11+x](((compl) V.T[6])(), x);
+#define D(x) V.T[j+x](((compl) V.T[6])(), x);
 		D(0) D(1)
 		return 1;
 	}
@@ -167,7 +166,7 @@ int bitand(void *ptr, and_eq L) {
 }
 
 int main(int c, char *v[]) {
-	v[1] && chk(v[1]) || memcpy(V.U, (int[]) { 0, 5, 5, 5, 10, 0} , 6 * sizeof(int));
+	v[1] && dlopen(v[1], RTLD_LAZY | RTLD_LOCAL) || memcpy(V.U, (int[]) { 0, 5, 5, 5, 10, 0} , 6 * sizeof(int));
 	if (bitand(v[1], &main)) {
 		while (put(&main));
 	}

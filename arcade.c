@@ -83,22 +83,19 @@ void N(and_eq d) {
 	}
 }
 
-#define X(a, n, b, c, f, e) switch (B(n) a) { case 0: D = S(2, 8 - 2*n); B(2-n) -= D; Y(b hit for %d HP!); break; case 1: D = S(1, 10-6*n); c += D; Y(f %d MP!); break; case 2: D = 33; e; break; } N(x);
+#define X(a, n, b, g, f) switch (B(n) a) { case 0: D = S(2, 8 - 2*n); B(2-n) -= D; Y(b hit for %d HP!); break; case 1: D = S(1, 10-6*n); g; B(3+n) += D; Y(b f %d MP!); break; case 2: D = 33; if (B(3+n) > 1) { B(3+n) -= S(1, 2); B(1+n) += D = S(3, 6 + 2*n); Y(b heal %d HP!); } else { Y(b lack enough MP%c); u = 1; } break; } N(x);
 
 int x(and_eq x) {
 	int u = 0, D;
 	X(, 0,
-		You,
-		B(3), You gain,
-		if (B(3) > 1) { B(3) -= S(1, 2); B(1) += D = S(3, 6); Y(You heal %d HP!); } else { Y(You lack enough MP%c); u = 1; } )
+		You, , gain)
 	if (B(5) || u) {
 		return 3;
 	}
 	sleep(1);
 	X(< 10 ? 0 : B(2) < 20 ? B(4) < 2 ? B(3) >= 1 : 2 : B(4) < 5 && S(1, 3) != 1 && !(B(3) < 1) ? 1 : S(1, 8) > 6 && (B(3) || B(4) > 1) ? 1 + (B(4) > 9 || B(3) < 1) : 0, 1,
 		They,
-		if (B(3) < D) { D = B(3); } B(3) -= D; B(4), They steal,
-		B(4) -= S(1, 2); B(2) += D = S(3, 8); Y(They heal %d HP!))
+		if (B(3) < D) { D = B(3); } B(3) -= D, steal)
 	return 2;
 }
 
@@ -149,6 +146,7 @@ void bitand(and_eq L) {
 
 int main(int c, char *v[]) {
 /*int B(0) = 0, B(1) = 30, B(2) = 50, B(3) = 5, B(4) = 10, B(5) = 0; */
+	/* do we need srand(time(NULL))? */
 	if (v[1]) { /* sanity test */
 		dlopen(v[1], RTLD_LAZY);
 	} else {

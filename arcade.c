@@ -24,8 +24,9 @@ typedef uintptr_t Q;
 #define not_eq(x, b) fprintf(q, x, b);
 #define or_eq(x, v) not_eq(#x, v)
 #define E(x, v, w) fprintf(q, #x, v, w);
-#define R(x, z) not_eq("sprintf(data, \"%%c\", ((W *)%d)->U[0] == " #x " ? '", Z) not_eq("~' : 32); ((W *)%d)->T", Z) not_eq("[3](%d,", o + 12) not_eq(" %d, data); ", a + z)
+#define R(x, z) E(sprintf(data, "%%c", A U[0] == " #x " ? '~' : 32); A T, Z, Z) not_eq("[3](%d,", o + 12) not_eq(" %d, data); ", a + z)
 #define Z (Q) &V
+#define A ((W *)%d)->
 
 /*int V.U[0] = 0, V.U[1] = 30, V.U[2] = 50, V.U[3] = 5, V.U[4] = 10, V.U[5] = 0; */
 char M[64] = ">>> DEFEAT THE MELONLORD <<<";
@@ -42,21 +43,22 @@ void xor_eq(and_eq ptr2) {
 	char *x = "\0  ______________________________\0 /                              \\\\\0/                                \\\\\0|                                |\0|                                |\0|  ==== ====          ==== ====  |\0|                                |\0|      O                  O      |\0|     /|->              <-|\\\\     |\0|      |                  |      |\0|     / \\\\                / \\\\     |\0|                                |\0|   ATTACK   REGENERATE   HEAL   |\0|                                |\0----------------------------------\0";
 	int o = b;
 	while (*++x) {
-		or_eq(((W *)%d)-, Z)
-		not_eq(">T[3](%d,", b++)
+		or_eq(A, Z)
+		not_eq("T[3](%d,", b++)
 		not_eq("%d, ", a)
 		not_eq("\"%s\"); \n", x)
 		while (*++x);
 	}
-	or_eq(((W *)%d)-, Z)
-	not_eq(">T[3](%d,", o+2)
+	or_eq(A, Z)
+	not_eq("T[3](%d,", o+2)
 	or_eq(%d - strlen, a + 17)
 	or_eq(((char*) %d) / 2, (Q) M)
 	not_eq(", (char*) %d); char data[12]; ", (Q) M)
-	for (b=1; b<3; b++) {
-		E(sprintf(data, "%%3dh%%3dMP", ((W *)%d)->U[b], ((W *)%d)->U[b+2]); , Z, Z)
-		or_eq(((W *)%d)->T[3], Z)
-		E((%d, %d, data); , o + 4, a + b * 19 - 16)
+	b = 1;
+	while (b<3) {
+		E(sprintf(data, "%%3dh%%3dMP", A U[b], A U[b+2]); , Z, Z)
+		or_eq(A T[3], Z)
+		E((%d, %d, data); , o + 4, a + b++ * 19 - 16)
 	}
 	R(0, 3)
 	R(0, 10)
@@ -64,8 +66,8 @@ void xor_eq(and_eq ptr2) {
 	R(1, 23)
 	R(2, 25)
 	R(2, 30)
-	or_eq(((W *)%d)->T[4](); return 1; } void init() {, Z)
-	or_eq(((W *)%d)->T[14] = k; }, Z)
+	or_eq(A T[4](); return 1; } void init() {, Z)
+	or_eq(A T[14] = k; }, Z)
 	, c.so, )
 	xor_eq(ptr2);
 }

@@ -99,7 +99,7 @@ int check_winlose(and_eq chr) {
 	if (V.U[5] = (V.U[1] * V.U[2] <= 0)) {
 		int x = V.U[1] > 0, cnt = 0;
 		for (; (V.U[5] | sleep(++cnt)) && cnt < 3; xor_eq(chr)) {
-			sprintf(M, K_K(cnt & 1, "%s %s ", "died!\0", "defeated", " %s!"), U_U((!x) ^ (cnt & 1)), H_H((!x) ^ (cnt & 1)), U_U(x ^ (cnt & 1)));
+			sprintf(M, K_K(cnt & 1, "%s %s ", died!\0, defeated, " %s!"), U_U((!x) ^ (cnt & 1)), H_H((!x) ^ (cnt & 1)), U_U(x ^ (cnt & 1)));
 		}
 		return 0;
 	}

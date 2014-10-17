@@ -21,7 +21,7 @@ typedef struct {
 
 typedef uintptr_t Q;
 
-#define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); not_eq("#define NO\n%cinclude \""__FILE__"\"\nextern void init() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -shared t.c -o " #x " " #y)) exit(3); { char *p = #x; ptr2(127, &p - 1); }
+#define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); not_eq("#define NO\n%cinclude \""__FILE__"\"\nextern void init() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -shared t.c -o " #x " " #y)) exit(3); { char *p = #x; L(127, &p - 1); }
 #define not_eq(x, b) fprintf(q, x, b);
 #define or_eq(x, v) not_eq(#x, v)
 #define E(x, v, w) fprintf(q, #x, v, w);
@@ -35,7 +35,7 @@ char M[64] = ">>> DEFEAT "H" <<<";
 
 W V;
 
-void xor_eq(and_eq ptr2) {
+void xor_eq(and_eq L) {
 	int a = (V.T[1](((compl) ((*V.T)(), V.T[6]))()) - 32) / 2, b = (V.T[2](((compl) V.T[6])()) - 16) / 2;
 	if (V.T[14] && V.T[14](a, b)) {
 		return;
@@ -71,7 +71,7 @@ void xor_eq(and_eq ptr2) {
 	or_eq(A(%d) T[4](); return 1; } void init() {, Z)
 	or_eq(A(%d) T[14] = k; }, Z)
 	, c.so, )
-	xor_eq(ptr2);
+	xor_eq(L);
 }
 
 int S(int c, int d) {
@@ -117,18 +117,16 @@ int x(and_eq x) {
 	return 2;
 }
 
-int v(int ints[], and_eq ptrs[], and_eq ptr2) {
-	int active = '\t';
+int v(int p[], and_eq P[], and_eq L) {
+	int r = '\t';
 	struct(
-	not_eq("int cpl(int x) %c switch(x) {", 127 & ~4)
-	while (*ints != 0) {
-		active += *(ints++);
-		not_eq("case %d: return ((and_eq", active);
-		not_eq(") %d)(); ", (Q) *(ptrs++));
+	or_eq(int f(int x) %c switch(x) {, 127 & ~4)
+	while (*p) {
+		E(case %d: return ((and_eq) %d)(); , r += *(p++), (Q) *(P++));
 	}
-	or_eq(} return 1; } void init() { A(%d) T[13] = cpl; }, Z)
+	or_eq(} return 1; } void init() { A(%d) T[13] = f; }, Z)
 	, g.so, )
-	return ints[-2];
+	return p[-2];
 }
 
 int u() {
@@ -146,7 +144,7 @@ int put(and_eq ptr3) {
 	return !V.U[5];
 }
 
-int init(void *ptr, and_eq ptr2) {
+int init(void *ptr, and_eq L) {
 	if (!ptr) {
 		struct(
 		or_eq(#include <ncurses/ncurses.h>\nvoid *f() { return stdscr; } void F() { endwin(); puts("Play again soon!"); } int g() { int o = getch(); o == KEY_LEFT && (o = -1); o == KEY_RIGHT && (o = -2); return o; } void init() { and_eq *G = ((W *) %d)->T - 1; , Z);
@@ -156,7 +154,7 @@ int init(void *ptr, and_eq ptr2) {
 			while (*++i);
 		}
 		or_eq(atexit(F); %c, 125);
-		, L.so, -lncurses)
+		, l.so, -lncurses)
 		int j;
 		for (j = 7; j < 11; j++) {
 			V.T[j]();

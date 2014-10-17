@@ -20,7 +20,7 @@ typedef struct {
 
 typedef uintptr_t Q;
 
-#define struct(z, x, y) FILE*q = fopen("tmp.c", "w"); if (q == NULL) exit(2); not_eq("#define NO\n%cinclude \""__FILE__"\"\nextern void init() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -shared tmp.c -o " #x " " #y " -ggdb")) exit(3); { char *p = #x; ptr2(127, &p - 1); }
+#define struct(z, x, y) FILE*q = fopen("tmp.c", "w"); if (q == NULL) exit(2); not_eq("#define NO\n%cinclude \""__FILE__"\"\nextern void init() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -shared tmp.c -o " #x " " #y)) exit(3); { char *p = #x; ptr2(127, &p - 1); }
 #define not_eq(x, b) fprintf(q, x, b);
 #define or_eq(x, v) not_eq(#x, v)
 
@@ -29,13 +29,13 @@ char M[64] = ">>> DEFEAT THE MELONLORD <<<";
 
 W V;
 
-void render_screen(and_eq ptr2) {
+void xor_eq(and_eq ptr2) {
 	int a = (V.T[1](((compl) ((*V.T)(), V.T[6]))()) - 32) / 2, b = (V.T[2](((compl) V.T[6])()) - 16) / 2;
 	if (V.T[14] && V.T[14](a, b)) {
 		return;
 	}
 	struct(
-	not_eq("int km(int a, int b) { if (%d != a || b != ", a)
+	not_eq("int k(int a, int b) { if (%d != a || b != ", a)
 	not_eq("%d) { return 0; }", b)
 	char *x = "\0  ______________________________\0 /                              \\\\\0/                                \\\\\0|                                |\0|                                |\0|  ==== ====          ==== ====  |\0|                                |\0|      O                  O      |\0|     /|->              <-|\\\\     |\0|      |                  |      |\0|     / \\\\                / \\\\     |\0|                                |\0|   ATTACK   REGENERATE   HEAL   |\0|                                |\0----------------------------------\0";
 	int o = b;
@@ -69,9 +69,9 @@ void render_screen(and_eq ptr2) {
 	R(2, [, 25)
 	R(2, ], 30)
 	or_eq(((W *)%d)->T[4](); return 1; } void init() {, (Q) &V)
-	or_eq(((W *)%d)->T[14] = km; }, (Q) &V)
+	or_eq(((W *)%d)->T[14] = k; }, (Q) &V)
 	, tmp160.so, )
-	render_screen(ptr2);
+	xor_eq(ptr2);
 }
 
 int roll(int c, int d) {
@@ -98,7 +98,7 @@ void enemy_turn() {
 int check_winlose(and_eq chr) {
 	if (V.U[5] = (V.U[1] * V.U[2] <= 0)) {
 		int x = V.U[1] > 0, cnt = 0;
-		for (; (V.U[5] | sleep(++cnt)) && cnt < 3; render_screen(chr)) {
+		for (; (V.U[5] | sleep(++cnt)) && cnt < 3; xor_eq(chr)) {
 			sprintf(M, K_K(cnt & 1, "%s %s ", "died!\0", "defeated", " %s!"), U_U((!x) ^ (cnt & 1)), H_H((!x) ^ (cnt & 1)), U_U(x ^ (cnt & 1)));
 		}
 		return 0;
@@ -113,13 +113,13 @@ int x(and_eq next) {
 	case 1: V.U[3] += D = roll(1, 10); sprintf(M, "You regenerate %d MP!", D); break;
 	case 2: if (V.U[3] > 1) { V.U[3] -= roll(1, 2); V.U[1] += D = roll(3, 6); sprintf(M, "You heal for %d HP!", D); } else { strcpy(M, "You don't have enough MP!"); no_run = 1; } break;
 	}
-	render_screen(next);
+	xor_eq(next);
 	if (!check_winlose(next) || no_run) {
 		return 3;
 	}
 	sleep(1);
 	enemy_turn();
-	render_screen(next);
+	xor_eq(next);
 	check_winlose(next);
 	return 2;
 }
@@ -143,7 +143,7 @@ int u() {
 }
 
 int put(and_eq ptr3) {
-	render_screen(ptr3);
+	xor_eq(ptr3);
 	int getched = V.T[5]();
 	if (getched & (~((1+~1U) >> 1))) {
 		getched += V.U[0] + 3;

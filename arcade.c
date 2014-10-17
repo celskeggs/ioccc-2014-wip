@@ -25,7 +25,7 @@ W V;
 #include <stdint.h>
 #include <dlfcn.h>
 
-#define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); not_eq("#define NO\n%cinclude \""__FILE__"\"\nextern void bitand() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -shared t.c -o " #x " " #y)) exit(3); { char *p = #x; L(127, &p - 1); }
+#define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); not_eq("%cinclude \""__FILE__"\"\nextern void bitand() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -shared t.c -o " #x " -DNO " #y)) exit(3); { char *p = #x; L(127, &p - 1); }
 #define not_eq(x, b) fprintf(q, x, b);
 #define E(x, v, w) fprintf(q, #x, v, w);
 #define or_eq(x, v) not_eq(#x, v)
@@ -44,12 +44,9 @@ void xor_eq(and_eq L) {
 	}
 	struct(
 	E(int k() {V = *(W *)%d; char *y = (char*) %d; , Q &V, Q M)
+	or_eq(int x = %d; , a)
 	char *x = "\0; ; ; ; ; ; ; ; ;; ; ; ; ; ; ; ; ; \0{                                } \0{                                } \0{                                } \0{                                } \0{  ==== ====          ==== ====  } \0{                                } \0{      O                  O      } \0{     /|-}              {-|\\\\     } \0{      |                  |      } \0{     / \\\\                / \\\\     } \0{                                } \0{                                } \0{                                } \0; ; ; ; ; ; ; ; ;; ; ; ; ; ; ; ; ; \0";
-	while (*++x) {
-		E(J(3)(%d, %d\0), b++, a)
-		not_eq(", \"%s\"); ", x)
-		while (*++x);
-	}
+	while (*++x) for (E(J(3)(%d, x, "%s"); , b++, x)*++x; );
 	R(0, ATTACK)
 	R(1, REGENERATE)
 	R(2, HEAL)

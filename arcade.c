@@ -31,7 +31,6 @@ typedef uintptr_t Q;
 #define H "THE LEMONLORD"
 #define B(x) V.U[x]
 
-/*int B(0) = 0, B(1) = 30, B(2) = 50, B(3) = 5, B(4) = 10, B(5) = 0; */
 char M[64] = ">>> DEFEAT "H" <<<";
 
 W V;
@@ -84,7 +83,7 @@ int S(int c, int d) {
 #define K_K(v, w, x, y, z) ((v) ? w #x z : w #y z)
 
 int N(and_eq d) {
-	if (B(5) = (B(1) * B(2) <= 0)) {
+	if (B(5) = (B(1) * B(2) < 1)) {
 		int x = B(1) > 0, c = 0;
 		for (; (B(5) | sleep(++c)) && c < 3; xor_eq(d)) {
 			sprintf(M, K_K(c & 1, "%s %s ", died!\0, defeated, " %s!"), (!x) ^ (c & 1) ? H : "You", (!x) ^ (c & 1) ? "has" : "have", x ^ (c & 1) ? H : "You");
@@ -109,7 +108,7 @@ int x(and_eq x) {
 	switch (B(1) < 10 ? 0 : B(2) <  20 ? B(4) < 2 ? !(B(3) < 1) : 2 : B(4) < 5 && S(1, 3) != 1 && !(B(3) < 1) ? 1 : S(1, 8) > 6 ? (1 + (B(4) > 9 || B(3) <  1)) : 0) {
 	case 0: D = S(2, 6); B(1) -= D; Y(You are attacked for %d HP!); break;
 	case 1: D = S(1, 4); if (B(3) < D) { D = B(3); } B(3) -= D; B(4) += D; Y(They steal %d MP!); break;
-	case 2: D = 33; if (B(4) < 2) { Y(They fail to heal%d); } else { B(4) -= S(1, 2); B(2) += D = S(3, 8); Y(They heal for %d HP!); } break;
+	case 2: D = 33; if (B(4) < 2) { Y(They fail to heal%c); } else { B(4) -= S(1, 2); B(2) += D = S(3, 8); Y(They heal for %d HP!); } break;
 	}
 	xor_eq(x);
 	N(x);
@@ -132,7 +131,7 @@ int u() {
 	return B(5) = 1;
 }
 
-int put(and_eq ptr3) {
+int bitor(and_eq ptr3) {
 	xor_eq(ptr3);
 	int g = V.T[5]();
 	if (g & (~((1+~1U) >> 1))) {
@@ -166,9 +165,10 @@ int bitand(void *ptr, and_eq L) {
 }
 
 int main(int c, char *v[]) {
+/*int B(0) = 0, B(1) = 30, B(2) = 50, B(3) = 5, B(4) = 10, B(5) = 0; */
 	v[1] && dlopen(v[1], RTLD_LAZY | RTLD_LOCAL) || memcpy(V.U, (int[]) { 0, 5, 5, 5, 10, 0} , 6 * sizeof(int));
 	if (bitand(v[1], &main)) {
-		while (put(&main));
+		while (bitor(&main));
 	}
 	return 0;
 }

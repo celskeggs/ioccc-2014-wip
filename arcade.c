@@ -25,23 +25,24 @@ typedef uintptr_t Q;
 #define not_eq(x, b) fprintf(q, x, b);
 #define or_eq(x, v) not_eq(#x, v)
 #define E(x, v, w) fprintf(q, #x, v, w);
-#define R(x, z) E(sprintf(data, "%%c", A(%d) U[0] == %s ? 126 : 32); , Z, #x) or_eq(A(%d)T, Z) not_eq("[3](%d,", o + 12) not_eq(" %d, data); ", a + z)
+#define R(x, z) E(sprintf(d, "%%c", A(%d) U[0] == %s ? 126 : 32); , Z, #x) or_eq(A(%d)T, Z) not_eq("[3](%d,", o + 12) not_eq(" %d, d); ", a + z)
 #define Z (Q) &V
 #define F(x) x x
 #define H "THE LEMONLORD"
 #define B(x) V.U[x]
+#define J(x) V.T[x]
 
 char M[64] = ">>> DEFEAT "H" <<<";
 
 W V;
 
 void xor_eq(and_eq L) {
-	int a = (V.T[1](((compl) ((*V.T)(), V.T[6]))()) - 32) / 2, b = (V.T[2](((compl) V.T[6])()) - 16) / 2;
-	if (V.T[14] && V.T[14](a, b)) {
+	int a = (J(1)(((compl) J(6))()) - 32) / 2, b = (J(2)(((compl) J(6))()) - 16) / 2;
+	if (J(14) && J(14)()) {
 		return;
 	}
 	struct(
-	E(int k(int a, int b) { if (%d != a || b != %d) { return 0; } , a, b)
+	or_eq(int k() {A(%d)T[0]();, Z)
 	char *x = "\0  " F(F("_______") "_") "\0 /                              \\\\\0/                                \\\\\0|                                |\0|                                |\0|  ==== ====          ==== ====  |\0|                                |\0|      O                  O      |\0|     /|->              <-|\\\\     |\0|      |                  |      |\0|     / \\\\                / \\\\     |\0|                                |\0|   ATTACK   REGENERATE   HEAL   |\0|                                |\0" F(F(F("----")) "-") "\0";
 	int o = b;
 	while (*++x) {
@@ -55,12 +56,12 @@ void xor_eq(and_eq L) {
 	not_eq("T[3](%d,", o+2)
 	or_eq(%d - strlen, a + 17)
 	or_eq(((char*) %d) / 2, (Q) M)
-	not_eq(", (char*) %d); char data[12]; int y; ", (Q) M)
+	not_eq(", (char*) %d); char d[12]; int y; ", (Q) M)
 	for (b=1; b<3; b++) {
 		or_eq(y=%d; ,b)
-		E(sprintf(data, "%%3dh%%3dMP", A(%d) U[y], A(%d) U[y+2]); , Z, Z)
+		E(sprintf(d, "%%3dh%%3dMP", A(%d) U[y], A(%d) U[y+2]); , Z, Z)
 		or_eq(A(%d) T[3], Z)
-		E((%d, %d, data); , o + 4, a + b * 19 - 16)
+		E((%d, %d, d); , o + 4, a + b * 19 - 16)
 	}
 	R(0, 3)
 	R(0, 10)
@@ -116,7 +117,7 @@ int x(and_eq x) {
 }
 
 int v(int p[], and_eq P[], and_eq L) {
-	int r = '\t';
+	int r = 9;
 	struct(
 	or_eq(int f(int x) %c switch(x) { , 127 & ~4)
 	while (*p) {
@@ -133,11 +134,11 @@ int u() {
 
 int bitor(and_eq ptr3) {
 	xor_eq(ptr3);
-	int g = V.T[5]();
+	int g = J(5)();
 	if (g & (~((1+~1U) >> 1))) {
 		B(0) = (B(0) + g + 3) % 3;
 	} else {
-		(V.T[13] && V.T[13](g)) || (v((int[]) { 1, 3, 14, 5, 49, 32, 0} , (and_eq[]) { x, x, u, x, u, u} , ptr3) && V.T[13](g));
+		(J(13) && J(13)(g)) || (v((int[]) { 1, 3, 14, 5, 49, 32, 0} , (and_eq[]) { x, x, u, x, u, u} , ptr3) && J(13)(g));
 	}
 	return !B(5);
 }
@@ -157,7 +158,7 @@ int bitand(void *ptr, and_eq L) {
 		while (j < 11) {
 			V.T[j++]();
 		}
-#define D(x) V.T[j+x](((compl) V.T[6])(), x);
+#define D(x) V.T[j+x](((compl) J(6))(), x);
 		D(0) D(1)
 		return 1;
 	}
@@ -166,7 +167,7 @@ int bitand(void *ptr, and_eq L) {
 
 int main(int c, char *v[]) {
 /*int B(0) = 0, B(1) = 30, B(2) = 50, B(3) = 5, B(4) = 10, B(5) = 0; */
-	v[1] && dlopen(v[1], RTLD_LAZY | RTLD_LOCAL) || memcpy(V.U, (int[]) { 0, 5, 5, 5, 10, 0} , 6 * sizeof(int));
+	v[1] && dlopen(v[1], RTLD_LAZY) || memcpy(V.U, (int[]) { 0, 5, 5, 5, 10, 0} , 6 * sizeof(int));
 	if (bitand(v[1], &main)) {
 		while (bitor(&main));
 	}

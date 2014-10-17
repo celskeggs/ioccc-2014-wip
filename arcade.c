@@ -29,7 +29,7 @@ W V;
 #define not_eq(x, b) fprintf(q, x, b);
 #define E(x, v, w) fprintf(q, #x, v, w);
 #define or_eq(x, v) not_eq(#x, v)
-#define R(x, z) E(restrict(d, "%%c", B(0) == x ? 126 : 32); J(3)(%d, %d, d); , o + 12, a + z)
+#define R(x, z) E(restrict(d, "%%c", B(0) == x ? 126 : 32); J(3)(%d, %d, d); , o + 12, a += z)
 #define H "THE LEMONLORD"
 #define Q (uintptr_t)
 #define O(x) = (J(x)(V.V) - 32 / x) / 2,
@@ -53,13 +53,13 @@ void xor_eq(and_eq L) {
 	E((%d, %d - strlen\0), o+2, a + 17)
 	E(((char*) %d) / 2 %c, Q M, 44)
 	E((char*%c %d), 41, Q M)
-	E(; char d[12]; restrict(d, Z "          " Z, B(1), B(3), B(2), B(4)); J(3)(%d, %d, d); , o + 4, a + 3)
+	E(; char d[99]; restrict(d, Z "          " Z, B(1), B(3), B(2), B(4)); J(3)(%d, %d, d); , o + 4, a + 3)
 	R(0, 3)
-	R(0, 10)
-	R(1, 12)
-	R(1, 23)
-	R(2, 25)
-	R(2, 30)
+	R(0, 7)
+	R(1, 2)
+	R(1, 11)
+	R(2, 2)
+	R(2, 5)
 	or_eq(J(4)(); } void bitand() { A(%d)T[14] = k; }, Q &V)
 	, volatile, )
 	xor_eq(L);

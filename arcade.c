@@ -72,14 +72,15 @@ int S(int c, int d) {
 
 #define Y(x) sprintf(M,#x,D)
 
-#define K_K(v, w, x, y, z) ((v) ? w #x z : w #y z)
-
 void N(and_eq d) {
+	int c = 0;
 	if (B(5) = (B(1) * B(2) < 1)) {
-		int x = B(1) > 0, c = 0;
-		for (; (B(5) | sleep(++c)) && c < 3; xor_eq(d)) {
-			sprintf(M, K_K(c & 1, "%s %s ", died!\0, defeated, " %s!"), (!x) ^ (c & 1) ? H : "You", (!x) ^ (c & 1) ? "has" : "have", x ^ (c & 1) ? H : "You");
+		for (; !sleep(++c) && c < 3; xor_eq(d)) {
+			char *D = ((B(1) < 1) + c) & 1 ? H " has" : "You have";
+			c & 1 ? Y(%s died!) : Y(%s won!);
 		}
+	} else {
+		xor_eq(d);
 	}
 }
 
@@ -90,7 +91,6 @@ int x(and_eq x) {
 	case 1: B(3) += D = S(1, 10); Y(You gain %d MP!); break;
 	case 2: if (B(3) > 1) { B(3) -= S(1, 2); B(1) += D = S(3, 6); Y(You heal %d HP!); } else { Y(You lack enough MP%c); u = 1; } break;
 	}
-	xor_eq(x);
 	N(x);
 	if (B(5) || u) {
 		return 3;
@@ -101,7 +101,6 @@ int x(and_eq x) {
 	case 1: D = S(1, 4); if (B(3) < D) { D = B(3); } B(3) -= D; B(4) += D; Y(They steal %d MP!); break;
 	case 2: D = 33; B(4) -= S(1, 2); B(2) += D = S(3, 8); Y(They heal %d HP!); break;
 	}
-	xor_eq(x);
 	N(x);
 	return 2;
 }

@@ -84,24 +84,22 @@ void N(and_eq d) {
 	}
 }
 
+#define X(a, n, b, c, e) switch (B a) { case 0: D = S(2, 8 - 2*n); B(2-n) -= D; Y(b hit for %d HP!); break; case 1: D = S(1, 10-6*n); c; break; case 2: D = 33; e; break; } N(x);
+
 int x(and_eq x) {
-	int u = 0, D = 33;
-	switch (B(0)) {
-	case 0: D = S(2, 8); B(2) -= D; Y(You hit for %d HP!); break;
-	case 1: B(3) += D = S(1, 10); Y(You gain %d MP!); break;
-	case 2: if (B(3) > 1) { B(3) -= S(1, 2); B(1) += D = S(3, 6); Y(You heal %d HP!); } else { Y(You lack enough MP%c); u = 1; } break;
-	}
-	N(x);
+	int u = 000, D; /* todo: remove extra zeroes - just to compensate during calculation */
+	X(	(0), 0,
+		You,
+		B(3) += D; Y(You gain %d MP!),
+		if (B(3) > 1) { B(3) -= S(1, 2); B(1) += D = S(3, 6); Y(You heal %d HP!); } else { Y(You lack enough MP%c); u = 1; } )
 	if (B(5) || u) {
 		return 3;
 	}
 	sleep(1);
-	switch (B(1) < 10 ? 0 : B(2) < 20 ? B(4) < 2 ? B(3) >= 1 : 2 : B(4) < 5 && S(1, 3) != 1 && !(B(3) < 1) ? 1 : S(1, 8) > 6 && (B(3) || B(4) > 1) ? 1 + (B(4) > 9 || B(3) < 1) : 0) {
-	case 0: D = S(2, 6); B(1) -= D; Y(You are hit for %d HP!); break;
-	case 1: D = S(1, 4); if (B(3) < D) { D = B(3); } B(3) -= D; B(4) += D; Y(They steal %d MP!); break;
-	case 2: D = 33; B(4) -= S(1, 2); B(2) += D = S(3, 8); Y(They heal %d HP!); break;
-	}
-	N(x);
+	X(	(1) < 10 ? 0 : B(2) < 20 ? B(4) < 2 ? B(3) >= 1 : 2 : B(4) < 5 && S(1, 3) != 1 && !(B(3) < 1) ? 1 : S(1, 8) > 6 && (B(3) || B(4) > 1) ? 1 + (B(4) > 9 || B(3) < 1) : 0, 1,
+		They,
+		if (B(3) < D) { D = B(3); } B(3) -= D; B(4) += D; Y(They steal %d MP!),
+		B(4) -= S(1, 2); B(2) += D = S(3, 8); Y(They heal %d HP!))
 	return 2;
 }
 

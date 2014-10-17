@@ -23,6 +23,7 @@ typedef uintptr_t Q;
 #define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); not_eq("#define NO\n%cinclude \""__FILE__"\"\nextern void init() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -shared t.c -o " #x " " #y)) exit(3); { char *p = #x; ptr2(127, &p - 1); }
 #define not_eq(x, b) fprintf(q, x, b);
 #define or_eq(x, v) not_eq(#x, v)
+#define E(x, v, w) fprintf(q, #x, v, w);
 #define R(x, z) not_eq("sprintf(data, \"%%c\", ((W *)%d)->U[0] == " #x " ? '", Z) not_eq("~' : 32); ((W *)%d)->T", Z) not_eq("[3](%d,", o + 12) not_eq(" %d, data); ", a + z)
 #define Z (Q) &V
 
@@ -37,8 +38,7 @@ void xor_eq(and_eq ptr2) {
 		return;
 	}
 	struct(
-	not_eq("int k(int a, int b) { if (%d != a || b != ", a)
-	not_eq("%d) { return 0; }", b)
+	E(int k(int a, int b) { if (%d != a || b != %d) { return 0; }, a, b)
 	char *x = "\0  ______________________________\0 /                              \\\\\0/                                \\\\\0|                                |\0|                                |\0|  ==== ====          ==== ====  |\0|                                |\0|      O                  O      |\0|     /|->              <-|\\\\     |\0|      |                  |      |\0|     / \\\\                / \\\\     |\0|                                |\0|   ATTACK   REGENERATE   HEAL   |\0|                                |\0----------------------------------\0";
 	int o = b;
 	while (*++x) {
@@ -51,13 +51,11 @@ void xor_eq(and_eq ptr2) {
 	or_eq(((W *)%d)-, Z)
 	not_eq(">T[3](%d,", o+2)
 	or_eq(%d - strlen, a + 17)
-	not_eq("((char*) %d) / 2, ", (Q) M)
-	not_eq("(char*) %d); char data[12]; ", (Q) M)
-	not_eq("sprintf(data, \"%%3dh%%3dMP\", ((W *)%d)->U[1], ((W *)", Z)
-	not_eq("%d)->U[3]); ", Z)
+	or_eq(((char*) %d) / 2, (Q) M)
+	not_eq(", (char*) %d); char data[12]; ", (Q) M)
+	E(sprintf(data, "%%3dh%%3dMP", ((W *)%d)->U[1], ((W *)%d)->U[3]); , Z, Z)
 	or_eq(((W *)%d)->T[3], Z)
-	not_eq("(%d, ", o + 4)
-	not_eq("%d, data); ", a + 3)
+	E((%d, %d, data); , o + 4, a + 3)
 	not_eq("sprintf(data, \"%%3dh%%3dMP\", ((W *)%d)->U[2], ((W *)", Z)
 	not_eq("%d)->U[4]); ", Z)
 	or_eq(((W *)%d)->T[3], Z)

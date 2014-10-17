@@ -6,6 +6,7 @@ typedef void *(*compl)();
 typedef struct {
 	and_eq T[15];
 	int U[6];
+	void *V;
 } W;
 
 #include <string.h>
@@ -31,7 +32,7 @@ typedef uintptr_t Q;
 #define H "THE LEMONLORD"
 #define B(x) V.U[x]
 #define J(x) V.T[x]
-#define O(x) = (J(x)(((compl) J(6))()) - 32 / x) / 2
+#define O(x) = (J(x)(V.V) - 32 / x) / 2
 
 char M[64] = ">>> DEFEAT "H" <<<";
 
@@ -147,19 +148,20 @@ int bitor(and_eq ptr3) {
 int bitand(void *ptr, and_eq L) {
 	if (!ptr) {
 		struct(
-		or_eq(#include <ncurses/ncurses.h>\nvoid *f() { return stdscr; } void F() { endwin(); puts("Play again?"); } int g() { int o = getch(); o == KEY_LEFT && (o = -1); o == KEY_RIGHT && (o = -2); return o; } void bitand() { and_eq *G = ((W *) %d)->T - 1; , Z);
-		char *i = "\0clear\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0f\0initscr\0cbreak\0noecho\0nonl\0intrflush\0keypad\0";
+		or_eq(#include <ncurses/ncurses.h>\nvoid F() { endwin(); puts("Play again?"); } int g() { int o = getch(); o == KEY_LEFT && (o = -1); o == KEY_RIGHT && (o = -2); return o; } void bitand() { and_eq *G = A(%d) T - 1; , Z); /* TODO: NULL -> g later */
+		char *i = "\0clear\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0NULL\0NULL\0cbreak\0noecho\0nonl\0intrflush\0keypad\0";
 		while (*++i) {
 			or_eq(*++G = (and_eq) %s; , i);
 			while (*++i);
 		}
+		or_eq(initscr(); A(%d)V = stdscr; , Z)
 		or_eq(atexit(F); %c, 125);
 		, l.so, -lncurses)
-		int j = 7;
+		int j = 8;
 		while (j < 11) {
 			V.T[j++]();
 		}
-#define D(x) V.T[j+x](((compl) J(6))(), x);
+#define D(x) V.T[j+x](V.V, x);
 		D(0) D(1)
 		return 1;
 	}

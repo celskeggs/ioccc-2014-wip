@@ -2,15 +2,15 @@
 
 typedef int (*and_eq)();
 
-typedef struct {
+struct W {
 	and_eq T[15];
 	int U[6];
 	void *V;
-} W;
+} V;
 
 #include <string.h>
 #include <stdio.h>
-#define A(x) ((W *)x)->
+#define A(x) ((struct W *)x)->
 
 #ifndef NO
 
@@ -35,8 +35,6 @@ typedef uintptr_t Q;
 
 char M[99] = ">>> DEFEAT "H" <<<";
 
-W V;
-
 void xor_eq(and_eq L) {
 	int a O(1), b O(2);
 	if (J(14)) {
@@ -50,8 +48,8 @@ void xor_eq(and_eq L) {
 	while (*++x) {
 		or_eq(A(%d), Z)
 		not_eq("T[3](%d,", b++)
-		not_eq("%d, ", a)
-		not_eq("\"%s\"); \n", x)
+		or_eq(%d, a)
+		not_eq(", \"%s\"); \n", x)
 		while (*++x);
 	}
 	or_eq(A(%d), Z)
@@ -146,20 +144,19 @@ void bitor(and_eq p) {
 void bitand(and_eq L) {
 	struct(
 	or_eq(#include <ncurses/ncurses.h>\nvoid F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() { and_eq *G = A(%d) T - 1; , Z);
-	char *i = "\0clear\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0cbreak\0noecho\0nonl\0intrflush\0keypad\0";
+	char *i = "\0clear\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0cbreak\0noecho\0nonl\0keypad\0";
 	while (*++i) {
 		or_eq(*++G = (and_eq) %s; , i);
 		while (*++i);
 	}
 	or_eq(initscr(); A(%d)V = stdscr; , Z)
-	or_eq(atexit(F); %c, 125);
+	or_eq(atexit(%c); } , 70);
 	, static_assert, -lncurses)
 	int j = 6;
 	while (j < 9) {
-		V.T[j++]();
+		J(j++)();
 	}
-#define D V.T[j](V.V, j-9);
-	D j++; D
+	J(j)(V.V, 1);
 	for (; !B(5); bitor(L));
 }
 

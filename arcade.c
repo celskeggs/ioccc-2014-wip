@@ -11,6 +11,7 @@ typedef struct {
 #include <string.h>
 #include <stdio.h>
 #define A(x) ((W *)x)->
+#define Z "%3dh%3dMP"
 
 W V;
 
@@ -32,31 +33,28 @@ typedef uintptr_t Q;
 #define H "THE LEMONLORD"
 #define B(x) V.U[x]
 #define J(x) V.T[x]
-#define O(x) = (J(x)(V.V) - 32 / x) / 2
+#define O(x) = (J(x)(V.V) - 32 / x) / 2,
 
 char M[99] = ">>> DEFEAT "H" <<<";
 
 void xor_eq(and_eq L) {
-	int a O(1), b O(2);
+	int a O(1) b O(2) o = b;
 	if (J(14)) {
 		J(14)();
 		return;
 	}
-	int o = b;
 	struct(
 	or_eq(int k() {V = *(W *)%d; V.T[0](); V.T[3], (Q) &V)
 	char *x = "\0" F(F("--------") "-") "\0{                                } \0{                                } \0{                                } \0{                                } \0{  ==== ====          ==== ====  } \0{                                } \0{      O                  O      } \0{     /|->              <-|\\\\     } \0{      |                  |      } \0{     / \\\\                / \\\\     } \0{                                } \0{   ATTACK   REGENERATE   HEAL   } \0{                                } \0" F(F(F("----")) "-") "\0";
 	while (*++x) {
-		not_eq("(%d,", b++)
-		or_eq(%d, a)
+		E((%d, %d\0), b++, a)
 		not_eq(", \"%s\"); V.T[3]", x)
 		while (*++x);
 	}
-	not_eq("(%d,", o+2)
-	or_eq(%d - strlen, a + 17)
+	E((%d, %d - strlen\0), o+2, a + 17)
 	E(((char*) %d) / 2 %c, (Q) M, 44)
 	E((char*%c %d), 41, (Q) M)
-	E(; char d[12]; sprintf(d, "%%3dh%%3dMP          %%3dh%%3dMP", V.U[1], V.U[3], V.U[2], V.U[4]); V.T[3](%d, %d, d); , o + 4, a + 3)
+	E(; char d[12]; sprintf(d, Z "          " Z, V.U[1], V.U[3], V.U[2], V.U[4]); V.T[3](%d, %d, d); , o + 4, a + 3)
 	R(0, 3)
 	R(0, 10)
 	R(1, 12)

@@ -157,13 +157,13 @@ int put(and_eq ptr3) {
 int init(void *ptr, and_eq ptr2) {
 	if (!ptr) {
 		struct(
-		OUT("#include <ncurses/ncurses.h>\nvoid *f() { return stdscr; } void F() { endwin(); puts(\"Play again soon!\"); } int g() { int out = getch(); out == KEY_LEFT && (out = -1); out == KEY_RIGHT && (out = -2); return out; } void init() { and_eq *G = ((W *) %d)->T - 1; ", (Q) &V);
+		OV(#include <ncurses/ncurses.h>\nvoid *f() { return stdscr; } void F() { endwin(); puts("Play again soon!"); } int g() { int out = getch(); out == KEY_LEFT && (out = -1); out == KEY_RIGHT && (out = -2); return out; } void init() { and_eq *G = ((W *) %d)->T - 1; , (Q) &V);
 		char *in = "\0clear\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0f\0initscr\0cbreak\0noecho\0nonl\0intrflush\0keypad\0";
 		while (*++in) {
-			OUT("*++G = (and_eq) %s; ", in);
+			OV(*++G = (and_eq) %s;, in);
 			while (*++in);
 		}
-		OUT(" atexit(F); %c", 125);
+		OV(atexit(F); %c, 125);
 		, "tmp-173.so", "-lncurses")
 		int i;
 		for (i = 7; i < 11; i++) {

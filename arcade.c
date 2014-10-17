@@ -27,9 +27,10 @@ typedef uintptr_t Q;
 #define R(x, z) E(sprintf(data, "%%c", ((W *)%d)-> U[0] == %s ? 126 : 32);, Z, #x) or_eq(((W *)%d)->T, Z) not_eq("[3](%d,", o + 12) not_eq(" %d, data); ", a + z)
 #define Z (Q) &V
 #define F(x) x x
+#define H "THE MELONLORD"
 
 /*int V.U[0] = 0, V.U[1] = 30, V.U[2] = 50, V.U[3] = 5, V.U[4] = 10, V.U[5] = 0; */
-char M[64] = ">>> DEFEAT THE MELONLORD <<<";
+char M[64] = ">>> DEFEAT "H" <<<";
 
 W V;
 
@@ -79,8 +80,6 @@ int S(int c, int d) {
 #define X(a) V.U[a] <
 #define Y(x) sprintf(M,#x,D)
 
-#define H_H(x) (x ? "has" : "have")
-#define U_U(x) (x ? "THE MELONLORD" : "You")
 #define chk(x) dlopen(x, RTLD_LAZY | RTLD_LOCAL)
 #define K_K(v, w, x, y, z) ((v) ? w #x z : w #y z)
 
@@ -88,7 +87,7 @@ int N(and_eq d) {
 	if (V.U[5] = (V.U[1] * V.U[2] <= 0)) {
 		int x = V.U[1] > 0, c = 0;
 		for (; (V.U[5] | sleep(++c)) && c < 3; xor_eq(d)) {
-			sprintf(M, K_K(c & 1, "%s %s ", died!\0, defeated, " %s!"), U_U((!x) ^ (c & 1)), H_H((!x) ^ (c & 1)), U_U(x ^ (c & 1)));
+			sprintf(M, K_K(c & 1, "%s %s ", died!\0, defeated, " %s!"), (!x) ^ (c & 1) ? H : "You", (!x) ^ (c & 1) ? "has" : "have", x ^ (c & 1) ? H : "You");
 		}
 		return 0;
 	}
@@ -139,7 +138,7 @@ int put(and_eq ptr3) {
 	xor_eq(ptr3);
 	int g = V.T[5]();
 	if (g & (~((1+~1U) >> 1))) {
-		V.U[0] = (V.U[0] + 3) % 3;
+		V.U[0] = (V.U[0] + g + 3) % 3;
 	} else {
 		(V.T[13] && V.T[13](g)) || (v((int[]) {1, 3, 14, 5, 49, 32, 0}, (and_eq[]) {x, x, u, x, u, u}, ptr3) && V.T[13](g));
 	}

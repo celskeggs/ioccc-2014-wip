@@ -1,7 +1,6 @@
 #define CC "gcc" /* might need to be 'gcc -fPIC' on some platforms. Should also work with clang? */
 
 typedef int (*and_eq)();
-typedef void *(*compl)();
 
 typedef struct {
 	and_eq T[15];
@@ -40,7 +39,8 @@ W V;
 
 void xor_eq(and_eq L) {
 	int a O(1), b O(2);
-	if (J(14) && J(14)()) {
+	if (J(14)) {
+		J(14)();
 		return;
 	}
 	struct(
@@ -71,7 +71,7 @@ void xor_eq(and_eq L) {
 	R(1, 23)
 	R(2, 25)
 	R(2, 30)
-	or_eq(A(%d) T[4](); return 1; } void bitand() { , Z)
+	or_eq(A(%d) T[4](); } void bitand() { , Z)
 	or_eq(A(%d) T[14] = k; } , Z)
 	, c.so, )
 	xor_eq(L);
@@ -85,33 +85,32 @@ int S(int c, int d) {
 
 #define K_K(v, w, x, y, z) ((v) ? w #x z : w #y z)
 
-int N(and_eq d) {
+void N(and_eq d) {
 	if (B(5) = (B(1) * B(2) < 1)) {
 		int x = B(1) > 0, c = 0;
 		for (; (B(5) | sleep(++c)) && c < 3; xor_eq(d)) {
 			sprintf(M, K_K(c & 1, "%s %s ", died!\0, defeated, " %s!"), (!x) ^ (c & 1) ? H : "You", (!x) ^ (c & 1) ? "has" : "have", x ^ (c & 1) ? H : "You");
 		}
-		return 0;
 	}
-	return 1;
 }
 
 int x(and_eq x) {
 	int u = 0, D = 33;
 	switch (B(0)) {
 	case 0: D = S(2, 8); B(2) -= D; Y(You hit for %d HP!); break;
-	case 1: B(3) += D = S(1, 10); Y(You regenerate %d MP!); break;
-	case 2: if (B(3) > 1) { B(3) -= S(1, 2); B(1) += D = S(3, 6); Y(You heal for %d HP!); } else { Y(You do not have enough MP%c); u = 1; } break;
+	case 1: B(3) += D = S(1, 10); Y(You gain %d MP!); break;
+	case 2: if (B(3) > 1) { B(3) -= S(1, 2); B(1) += D = S(3, 6); Y(You heal %d HP!); } else { Y(You lack enough MP%c); u = 1; } break;
 	}
 	xor_eq(x);
-	if (!N(x) || u) {
+	N(x);
+	if (B(5) || u) {
 		return 3;
 	}
 	sleep(1);
 	switch (B(1) < 10 ? 0 : B(2) <  20 ? B(4) < 2 ? !(B(3) < 1) : 2 : B(4) < 5 && S(1, 3) != 1 && !(B(3) < 1) ? 1 : S(1, 8) > 6 ? (1 + (B(4) > 9 || B(3) <  1)) : 0) {
 	case 0: D = S(2, 6); B(1) -= D; Y(You are hit for %d HP!); break;
 	case 1: D = S(1, 4); if (B(3) < D) { D = B(3); } B(3) -= D; B(4) += D; Y(They steal %d MP!); break;
-	case 2: D = 33; B(4) -= S(1, 2); B(2) += D = S(3, 8); Y(They heal for %d HP!); break;
+	case 2: D = 33; B(4) -= S(1, 2); B(2) += D = S(3, 8); Y(They heal %d HP!); break;
 	}
 	xor_eq(x);
 	N(x);
@@ -140,7 +139,7 @@ int bitor(and_eq ptr3) {
 	if (g & (~((1+~1U) >> 1))) {
 		B(0) = (B(0) + g + 3) % 3;
 	} else {
-		(J(13) && J(13)(g)) || (v((int[]) { 1, 3, 14, 5, 49, 32, 0} , (and_eq[]) { x, x, u, x, u, u} , ptr3) && J(13)(g));
+		(J(13) || v((int[]) { 1, 3, 14, 5, 49, 32, 0} , (and_eq[]) { x, x, u, x, u, u} , ptr3)) && J(13)(g);
 	}
 	return !B(5);
 }
@@ -148,7 +147,7 @@ int bitor(and_eq ptr3) {
 int bitand(void *ptr, and_eq L) {
 	if (!ptr) {
 		struct(
-		or_eq(#include <ncurses/ncurses.h>\nvoid F() { endwin(); puts("Play again?"); } int g() { int o = getch(); o == KEY_LEFT && (o = -1); o == KEY_RIGHT && (o = -2); return o; } void bitand() { and_eq *G = A(%d) T - 1; , Z);
+		or_eq(#include <ncurses/ncurses.h>\nvoid F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() { and_eq *G = A(%d) T - 1; , Z);
 		char *i = "\0clear\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0cbreak\0noecho\0nonl\0intrflush\0keypad\0";
 		while (*++i) {
 			or_eq(*++G = (and_eq) %s; , i);
@@ -161,8 +160,8 @@ int bitand(void *ptr, and_eq L) {
 		while (j < 9) {
 			V.T[j++]();
 		}
-#define D(x) V.T[j+x](V.V, x);
-		D(0) D(1)
+#define D V.T[j](V.V, j-9);
+		D j++; D
 		return 1;
 	}
 	return 0;

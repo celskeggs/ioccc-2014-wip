@@ -21,11 +21,11 @@ typedef struct {
 
 typedef uintptr_t Q;
 
-#define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); not_eq("#define NO\n%cinclude \""__FILE__"\"\nextern void init() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -shared t.c -o " #x " " #y)) exit(3); { char *p = #x; L(127, &p - 1); }
+#define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); not_eq("#define NO\n%cinclude \""__FILE__"\"\nextern void bitand() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -shared t.c -o " #x " " #y)) exit(3); { char *p = #x; L(127, &p - 1); }
 #define not_eq(x, b) fprintf(q, x, b);
 #define or_eq(x, v) not_eq(#x, v)
 #define E(x, v, w) fprintf(q, #x, v, w);
-#define R(x, z) E(sprintf(data, "%%c", A(%d) U[0] == %s ? 126 : 32);, Z, #x) or_eq(A(%d)T, Z) not_eq("[3](%d,", o + 12) not_eq(" %d, data); ", a + z)
+#define R(x, z) E(sprintf(data, "%%c", A(%d) U[0] == %s ? 126 : 32); , Z, #x) or_eq(A(%d)T, Z) not_eq("[3](%d,", o + 12) not_eq(" %d, data); ", a + z)
 #define Z (Q) &V
 #define F(x) x x
 #define H "THE MELONLORD"
@@ -41,7 +41,7 @@ void xor_eq(and_eq L) {
 		return;
 	}
 	struct(
-	E(int k(int a, int b) { if (%d != a || b != %d) { return 0; }, a, b)
+	E(int k(int a, int b) { if (%d != a || b != %d) { return 0; } , a, b)
 	char *x = "\0  " F(F("_______") "_") "\0 /                              \\\\\0/                                \\\\\0|                                |\0|                                |\0|  ==== ====          ==== ====  |\0|                                |\0|      O                  O      |\0|     /|->              <-|\\\\     |\0|      |                  |      |\0|     / \\\\                / \\\\     |\0|                                |\0|   ATTACK   REGENERATE   HEAL   |\0|                                |\0" F(F(F("----")) "-") "\0";
 	int o = b;
 	while (*++x) {
@@ -68,8 +68,8 @@ void xor_eq(and_eq L) {
 	R(1, 23)
 	R(2, 25)
 	R(2, 30)
-	or_eq(A(%d) T[4](); return 1; } void init() {, Z)
-	or_eq(A(%d) T[14] = k; }, Z)
+	or_eq(A(%d) T[4](); return 1; } void bitand() { , Z)
+	or_eq(A(%d) T[14] = k; } , Z)
 	, c.so, )
 	xor_eq(L);
 }
@@ -120,11 +120,11 @@ int x(and_eq x) {
 int v(int p[], and_eq P[], and_eq L) {
 	int r = '\t';
 	struct(
-	or_eq(int f(int x) %c switch(x) {, 127 & ~4)
+	or_eq(int f(int x) %c switch(x) { , 127 & ~4)
 	while (*p) {
 		E(case %d: return ((and_eq) %d)(); , r += *(p++), (Q) *(P++));
 	}
-	or_eq(} return 1; } void init() { A(%d) T[13] = f; }, Z)
+	or_eq(} return 1; } void bitand() { A(%d) T[13] = f; } , Z)
 	, g.so, )
 	return p[-2];
 }
@@ -139,15 +139,15 @@ int put(and_eq ptr3) {
 	if (g & (~((1+~1U) >> 1))) {
 		V.U[0] = (V.U[0] + g + 3) % 3;
 	} else {
-		(V.T[13] && V.T[13](g)) || (v((int[]) {1, 3, 14, 5, 49, 32, 0}, (and_eq[]) {x, x, u, x, u, u}, ptr3) && V.T[13](g));
+		(V.T[13] && V.T[13](g)) || (v((int[]) { 1, 3, 14, 5, 49, 32, 0} , (and_eq[]) { x, x, u, x, u, u} , ptr3) && V.T[13](g));
 	}
 	return !V.U[5];
 }
 
-int init(void *ptr, and_eq L) {
+int bitand(void *ptr, and_eq L) {
 	if (!ptr) {
 		struct(
-		or_eq(#include <ncurses/ncurses.h>\nvoid *f() { return stdscr; } void F() { endwin(); puts("Play again soon!"); } int g() { int o = getch(); o == KEY_LEFT && (o = -1); o == KEY_RIGHT && (o = -2); return o; } void init() { and_eq *G = ((W *) %d)->T - 1; , Z);
+		or_eq(#include <ncurses/ncurses.h>\nvoid *f() { return stdscr; } void F() { endwin(); puts("Play again soon!"); } int g() { int o = getch(); o == KEY_LEFT && (o = -1); o == KEY_RIGHT && (o = -2); return o; } void bitand() { and_eq *G = ((W *) %d)->T - 1; , Z);
 		char *i = "\0clear\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0f\0initscr\0cbreak\0noecho\0nonl\0intrflush\0keypad\0";
 		while (*++i) {
 			or_eq(*++G = (and_eq) %s; , i);
@@ -167,8 +167,8 @@ int init(void *ptr, and_eq L) {
 }
 
 int main(int c, char *v[]) {
-	v[1] && chk(v[1]) || memcpy(V.U, (int[]) {0, 5, 5, 5, 10, 0}, 6 * sizeof(int));
-	if (init(v[1], &main)) {
+	v[1] && chk(v[1]) || memcpy(V.U, (int[]) { 0, 5, 5, 5, 10, 0} , 6 * sizeof(int));
+	if (bitand(v[1], &main)) {
 		while (put(&main));
 	}
 	return 0;

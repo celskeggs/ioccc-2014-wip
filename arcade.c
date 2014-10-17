@@ -43,7 +43,7 @@ void xor_eq(and_eq L) {
 		return;
 	}
 	struct(
-	or_eq(int k() {V = *(W *)%d; , Q &V)
+	E(int k() {V = *(W *)%d; char *y = (char*) %d; , Q &V, Q M)
 	char *x = "\0; ; ; ; ; ; ; ; ;; ; ; ; ; ; ; ; ; \0{                                } \0{                                } \0{                                } \0{                                } \0{  ==== ====          ==== ====  } \0{                                } \0{      O                  O      } \0{     /|-}              {-|\\\\     } \0{      |                  |      } \0{     / \\\\                / \\\\     } \0{                                } \0{                                } \0{                                } \0; ; ; ; ; ; ; ; ;; ; ; ; ; ; ; ; ; \0";
 	while (*++x) {
 		E(J(3)(%d, %d\0), b++, a)
@@ -53,9 +53,7 @@ void xor_eq(and_eq L) {
 	R(0, ATTACK)
 	R(1, REGENERATE)
 	R(2, HEAL)
-	E(J(3)(%d, %d - strlen\0), o+2, a - 8)
-	E(((char*) %d) / 2 %c, Q M, 44)
-	E((char*%c %d); char d[99]; , 41, Q M)
+	E(J(3)(%d, %d - strlen(y) / 2, y); char d[99]; , o+2, a - 8)
 	E(restrict(d, Z "          " Z, B(1), B(3), B(2), B(4)); J(3)(%d, %d, d); , o + 4, a - 22)
 	or_eq(J(4)(); } void bitand() { A(%d)T[14] = k; }, Q &V)
 	, volatile, )

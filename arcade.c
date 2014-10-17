@@ -45,7 +45,7 @@ void xor_eq(and_eq L) {
 	}
 	struct(
 	or_eq(int k() {A(%d)T[0]();, Z)
-	char *x = "\0  " F(F("_______") "_") "\0 /                              \\\\\0/                                \\\\\0|                                |\0|                                |\0|  ==== ====          ==== ====  |\0|                                |\0|      O                  O      |\0|     /|->              <-|\\\\     |\0|      |                  |      |\0|     / \\\\                / \\\\     |\0|                                |\0|   ATTACK   REGENERATE   HEAL   |\0|                                |\0" F(F(F("----")) "-") "\0";
+	char *x = "\0" F(F("--------") "-") "\0{                                } \0{                                } \0{                                } \0{                                } \0{  ==== ====          ==== ====  } \0{                                } \0{      O                  O      } \0{     /|->              <-|\\\\     } \0{      |                  |      } \0{     / \\\\                / \\\\     } \0{                                } \0{   ATTACK   REGENERATE   HEAL   } \0{                                } \0" F(F(F("----")) "-") "\0";
 	int o = b;
 	while (*++x) {
 		or_eq(A(%d), Z)
@@ -144,8 +144,8 @@ int bitor(and_eq ptr3) {
 	return !B(5);
 }
 
-int bitand(void *ptr, and_eq L) {
-	if (!ptr) {
+int bitand(void *p, and_eq L) {
+	if (!p) {
 		struct(
 		or_eq(#include <ncurses/ncurses.h>\nvoid F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() { and_eq *G = A(%d) T - 1; , Z);
 		char *i = "\0clear\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0cbreak\0noecho\0nonl\0intrflush\0keypad\0";

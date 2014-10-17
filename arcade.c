@@ -20,10 +20,9 @@ typedef struct {
 
 typedef uintptr_t Q;
 
-#define BEGIN FILE*out = fopen("tmp.c", "w"); if (out == NULL) exit(2); OUT("#define NO\n%cinclude \""__FILE__"\"\nextern void init() __attribute__((constructor)); \n", 35);
+#define struct(z, x, y) FILE*out = fopen("tmp.c", "w"); if (out == NULL) exit(2); OUT("#define NO\n%cinclude \""__FILE__"\"\nextern void init() __attribute__((constructor)); \n", 35); z fclose(out); if (system(CC " -shared tmp.c -o " x " " y " -ggdb")) exit(3); { char *ptr = x; ptr2(127, &ptr - 1); }
 #define OUT(x, b) fprintf(out, x, b);
 #define OV(x, v) OUT(#x, v)
-#define END(x, y) fclose(out); if (system(CC " -shared tmp.c -o " x " " y " -ggdb")) exit(3); { char *ptr = x; ptr2(127, &ptr - 1); }
 
 /*int V.U[0] = 0, V.U[1] = 30, V.U[2] = 50, V.U[3] = 5, V.U[4] = 10, V.U[5] = 0; */
 char msg_dat[64] = ">>> DEFEAT THE MELONLORD <<<";
@@ -35,7 +34,7 @@ void render_screen(and_eq ptr2) {
 	if (V.T[14] && V.T[14](a, b)) {
 		return;
 	}
-	BEGIN
+	struct(
 	OUT("int km(int a, int b) { if (%d != a || b != ", a)
 	OUT("%d) { return 0; }", b)
 	char *x = "\0  ______________________________\0 /                              \\\\\0/                                \\\\\0|                                |\0|                                |\0|  ==== ====          ==== ====  |\0|                                |\0|      O                  O      |\0|     /|->              <-|\\\\     |\0|      |                  |      |\0|     / \\\\                / \\\\     |\0|                                |\0|   ATTACK   REGENERATE   HEAL   |\0|                                |\0----------------------------------\0";
@@ -71,7 +70,7 @@ void render_screen(and_eq ptr2) {
 	R(2, ], 30)
 	OV(((W *)%d)->T[4](); return 1; } void init() {, (Q) &V)
 	OV(((W *)%d)->T[14] = km; }, (Q) &V)
-	END("tmp-160.so", "")
+	, "tmp-160.so", "")
 	render_screen(ptr2);
 }
 
@@ -127,7 +126,7 @@ int x(and_eq next) {
 
 int v(int ints[], and_eq ptrs[], and_eq ptr2) {
 	int active = '\t';
-	BEGIN
+	struct(
 	OUT("int cpl(int x) %c switch(x) {", 127 & ~4)
 	while (*ints != 0) {
 		active += *(ints++);
@@ -135,7 +134,7 @@ int v(int ints[], and_eq ptrs[], and_eq ptr2) {
 		OUT(") %d)(); ", (Q) *(ptrs++));
 	}
 	OUT("} return 1; } void init() { W *V = (W *) %d; V->T[13] = cpl; }", (Q) &V)
-	END("tmp-172.so", "")
+	, "tmp-172.so", "")
 	return ints[-2];
 }
 
@@ -157,7 +156,7 @@ int put(and_eq ptr3) {
 
 int init(void *ptr, and_eq ptr2) {
 	if (!ptr) {
-		BEGIN
+		struct(
 		OUT("#include <ncurses/ncurses.h>\nvoid *f() { return stdscr; } void F() { endwin(); puts(\"Play again soon!\"); } int g() { int out = getch(); out == KEY_LEFT && (out = -1); out == KEY_RIGHT && (out = -2); return out; } void init() { and_eq *G = ((W *) %d)->T - 1; ", (Q) &V);
 		char *in = "\0clear\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0f\0initscr\0cbreak\0noecho\0nonl\0intrflush\0keypad\0";
 		while (*++in) {
@@ -165,7 +164,7 @@ int init(void *ptr, and_eq ptr2) {
 			while (*++in);
 		}
 		OUT(" atexit(F); %c", 125);
-		END("tmp-173.so", "-lncurses");
+		, "tmp-173.so", "-lncurses")
 		int i;
 		for (i = 7; i < 11; i++) {
 			V.T[i]();
@@ -178,12 +177,10 @@ int init(void *ptr, and_eq ptr2) {
 }
 
 int main(int c, char *v[]) {
-	if (v[1] != NULL) { /* sanity check option */
+	if (v[1]) { /* sanity check option */
 		check(v[1]);
 	} else {
-		V.U[0] = V.U[5] = 0;
-		V.U[1] = V.U[2] = V.U[3] = 5;
-		V.U[4] = 10;
+		memcpy(V.U, (int[]) {0, 5, 5, 5, 10, 0}, 6);
 	}
 	if (init(v[1], &main)) {
 		while (put(&main));

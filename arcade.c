@@ -31,13 +31,14 @@ typedef uintptr_t Q;
 #define H "THE LEMONLORD"
 #define B(x) V.U[x]
 #define J(x) V.T[x]
+#define O(x) = (J(x)(((compl) J(6))()) - 32 / x) / 2
 
 char M[64] = ">>> DEFEAT "H" <<<";
 
 W V;
 
 void xor_eq(and_eq L) {
-	int a = (J(1)(((compl) J(6))()) - 32) / 2, b = (J(2)(((compl) J(6))()) - 16) / 2;
+	int a O(1), b O(2);
 	if (J(14) && J(14)()) {
 		return;
 	}
@@ -97,9 +98,9 @@ int N(and_eq d) {
 int x(and_eq x) {
 	int u = 0, D = 33;
 	switch (B(0)) {
-	case 0: D = S(2, 8); B(2) -= D; Y(You attack for %d HP!); break;
+	case 0: D = S(2, 8); B(2) -= D; Y(You hit for %d HP!); break;
 	case 1: B(3) += D = S(1, 10); Y(You regenerate %d MP!); break;
-	case 2: if (B(3) > 1) { B(3) -= S(1, 2); B(1) += D = S(3, 6); Y(You heal for %d HP!); } else { Y(You do not have enough MP%d); u = 1; } break;
+	case 2: if (B(3) > 1) { B(3) -= S(1, 2); B(1) += D = S(3, 6); Y(You heal for %d HP!); } else { Y(You do not have enough MP%c); u = 1; } break;
 	}
 	xor_eq(x);
 	if (!N(x) || u) {
@@ -107,9 +108,9 @@ int x(and_eq x) {
 	}
 	sleep(1);
 	switch (B(1) < 10 ? 0 : B(2) <  20 ? B(4) < 2 ? !(B(3) < 1) : 2 : B(4) < 5 && S(1, 3) != 1 && !(B(3) < 1) ? 1 : S(1, 8) > 6 ? (1 + (B(4) > 9 || B(3) <  1)) : 0) {
-	case 0: D = S(2, 6); B(1) -= D; Y(You are attacked for %d HP!); break;
+	case 0: D = S(2, 6); B(1) -= D; Y(You are hit for %d HP!); break;
 	case 1: D = S(1, 4); if (B(3) < D) { D = B(3); } B(3) -= D; B(4) += D; Y(They steal %d MP!); break;
-	case 2: D = 33; if (B(4) < 2) { Y(They fail to heal%c); } else { B(4) -= S(1, 2); B(2) += D = S(3, 8); Y(They heal for %d HP!); } break;
+	case 2: D = 33; B(4) -= S(1, 2); B(2) += D = S(3, 8); Y(They heal for %d HP!); break;
 	}
 	xor_eq(x);
 	N(x);
@@ -146,7 +147,7 @@ int bitor(and_eq ptr3) {
 int bitand(void *ptr, and_eq L) {
 	if (!ptr) {
 		struct(
-		or_eq(#include <ncurses/ncurses.h>\nvoid *f() { return stdscr; } void F() { endwin(); puts("Play again soon!"); } int g() { int o = getch(); o == KEY_LEFT && (o = -1); o == KEY_RIGHT && (o = -2); return o; } void bitand() { and_eq *G = ((W *) %d)->T - 1; , Z);
+		or_eq(#include <ncurses/ncurses.h>\nvoid *f() { return stdscr; } void F() { endwin(); puts("Play again?"); } int g() { int o = getch(); o == KEY_LEFT && (o = -1); o == KEY_RIGHT && (o = -2); return o; } void bitand() { and_eq *G = ((W *) %d)->T - 1; , Z);
 		char *i = "\0clear\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0f\0initscr\0cbreak\0noecho\0nonl\0intrflush\0keypad\0";
 		while (*++i) {
 			or_eq(*++G = (and_eq) %s; , i);

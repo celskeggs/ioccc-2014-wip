@@ -25,7 +25,7 @@ typedef uintptr_t Q;
 #define not_eq(x, b) fprintf(q, x, b);
 #define or_eq(x, v) not_eq(#x, v)
 #define E(x, v, w) fprintf(q, #x, v, w);
-#define R(x, z) E(sprintf(d, "%%c", A(%d) U[0] == %s ? 126 : 32); , Z, #x) or_eq(A(%d)T, Z) not_eq("[3](%d,", o + 12) not_eq(" %d, d); ", a + z)
+#define R(x, z) E(sprintf(d, "%%c", *A(%d)U == %s ? 126 : 32); , Z, #x) or_eq(A(%d)T, Z) not_eq("[3](%d,", o + 12) not_eq(" %d, d); ", a + z)
 #define Z (Q) &V
 #define F(x) x x
 #define H "THE LEMONLORD"
@@ -33,7 +33,7 @@ typedef uintptr_t Q;
 #define J(x) V.T[x]
 #define O(x) = (J(x)(V.V) - 32 / x) / 2
 
-char M[64] = ">>> DEFEAT "H" <<<";
+char M[99] = ">>> DEFEAT "H" <<<";
 
 W V;
 
@@ -57,8 +57,8 @@ void xor_eq(and_eq L) {
 	or_eq(A(%d), Z)
 	not_eq("T[3](%d,", o+2)
 	or_eq(%d - strlen, a + 17)
-	or_eq(((char*) %d) / 2, (Q) M)
-	not_eq(", (char*) %d); char d[12]; int y; ", (Q) M)
+	E(((char*) %d) / 2 %c, (Q) M, 44)
+	E((char*%c %d); char d[12]; int y; , 41, (Q) M)
 	for (b=1; b<3; b++) {
 		or_eq(y=%d; ,b)
 		E(sprintf(d, "%%3dh%%3dMP", A(%d) U[y], A(%d) U[y+2]); , Z, Z)
@@ -73,7 +73,7 @@ void xor_eq(and_eq L) {
 	R(2, 30)
 	or_eq(A(%d) T[4](); } void bitand() { , Z)
 	or_eq(A(%d) T[14] = k; } , Z)
-	, c.so, )
+	, volatile, )
 	xor_eq(L);
 }
 
@@ -125,7 +125,7 @@ int v(int p[], and_eq P[], and_eq L) {
 		E(case %d: return ((and_eq) %d)(); , r += *(p++), (Q) *(P++));
 	}
 	or_eq(} return 1; } void bitand() { A(%d) T[13] = f; } , Z)
-	, g.so, )
+	, thread_local, )
 	return p[-2];
 }
 
@@ -153,7 +153,7 @@ void bitand(and_eq L) {
 	}
 	or_eq(initscr(); A(%d)V = stdscr; , Z)
 	or_eq(atexit(F); %c, 125);
-	, l.so, -lncurses)
+	, static_assert, -lncurses)
 	int j = 6;
 	while (j < 9) {
 		V.T[j++]();

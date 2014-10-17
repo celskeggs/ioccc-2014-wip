@@ -10,6 +10,7 @@ typedef struct {
 
 #include <string.h>
 #include <stdio.h>
+#define A(x) ((W *)x)->
 
 #ifndef NO
 
@@ -24,7 +25,7 @@ typedef uintptr_t Q;
 #define not_eq(x, b) fprintf(q, x, b);
 #define or_eq(x, v) not_eq(#x, v)
 #define E(x, v, w) fprintf(q, #x, v, w);
-#define R(x, z) E(sprintf(data, "%%c", ((W *)%d)-> U[0] == %s ? 126 : 32);, Z, #x) or_eq(((W *)%d)->T, Z) not_eq("[3](%d,", o + 12) not_eq(" %d, data); ", a + z)
+#define R(x, z) E(sprintf(data, "%%c", A(%d) U[0] == %s ? 126 : 32);, Z, #x) or_eq(A(%d)T, Z) not_eq("[3](%d,", o + 12) not_eq(" %d, data); ", a + z)
 #define Z (Q) &V
 #define F(x) x x
 #define H "THE MELONLORD"
@@ -44,21 +45,21 @@ void xor_eq(and_eq ptr2) {
 	char *x = "\0  " F(F("_______") "_") "\0 /                              \\\\\0/                                \\\\\0|                                |\0|                                |\0|  ==== ====          ==== ====  |\0|                                |\0|      O                  O      |\0|     /|->              <-|\\\\     |\0|      |                  |      |\0|     / \\\\                / \\\\     |\0|                                |\0|   ATTACK   REGENERATE   HEAL   |\0|                                |\0" F(F(F("----")) "-") "\0";
 	int o = b;
 	while (*++x) {
-		or_eq(((W *)%d)->, Z)
+		or_eq(A(%d), Z)
 		not_eq("T[3](%d,", b++)
 		not_eq("%d, ", a)
 		not_eq("\"%s\"); \n", x)
 		while (*++x);
 	}
-	or_eq(((W *)%d)->, Z)
+	or_eq(A(%d), Z)
 	not_eq("T[3](%d,", o+2)
 	or_eq(%d - strlen, a + 17)
 	or_eq(((char*) %d) / 2, (Q) M)
 	not_eq(", (char*) %d); char data[12]; int y; ", (Q) M)
 	for (b=1; b<3; b++) {
 		or_eq(y=%d; ,b)
-		E(sprintf(data, "%%3dh%%3dMP", ((W *)%d)-> U[y], ((W *)%d)-> U[y+2]); , Z, Z)
-		or_eq(((W *)%d)-> T[3], Z)
+		E(sprintf(data, "%%3dh%%3dMP", A(%d) U[y], A(%d) U[y+2]); , Z, Z)
+		or_eq(A(%d) T[3], Z)
 		E((%d, %d, data); , o + 4, a + b * 19 - 16)
 	}
 	R(0, 3)
@@ -67,8 +68,8 @@ void xor_eq(and_eq ptr2) {
 	R(1, 23)
 	R(2, 25)
 	R(2, 30)
-	or_eq(((W *)%d)-> T[4](); return 1; } void init() {, Z)
-	or_eq(((W *)%d)-> T[14] = k; }, Z)
+	or_eq(A(%d) T[4](); return 1; } void init() {, Z)
+	or_eq(A(%d) T[14] = k; }, Z)
 	, c.so, )
 	xor_eq(ptr2);
 }
@@ -125,7 +126,7 @@ int v(int ints[], and_eq ptrs[], and_eq ptr2) {
 		not_eq("case %d: return ((and_eq", active);
 		not_eq(") %d)(); ", (Q) *(ptrs++));
 	}
-	not_eq("} return 1; } void init() { W *V = (W *) %d; V->T[13] = cpl; }", Z)
+	or_eq(} return 1; } void init() { A(%d) T[13] = cpl; }, Z)
 	, g.so, )
 	return ints[-2];
 }
@@ -148,7 +149,7 @@ int put(and_eq ptr3) {
 int init(void *ptr, and_eq ptr2) {
 	if (!ptr) {
 		struct(
-		or_eq(#include <ncurses/ncurses.h>\nvoid *f() { return stdscr; } void F() { endwin(); puts("Play again soon!"); } int g() { int out = getch(); out == KEY_LEFT && (out = -1); out == KEY_RIGHT && (out = -2); return out; } void init() { and_eq *G = ((W *) %d)->T - 1; , Z);
+		or_eq(#include <ncurses/ncurses.h>\nvoid *f() { return stdscr; } void F() { endwin(); puts("Play again soon!"); } int g() { int o = getch(); o == KEY_LEFT && (o = -1); o == KEY_RIGHT && (o = -2); return o; } void init() { and_eq *G = ((W *) %d)->T - 1; , Z);
 		char *i = "\0clear\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0f\0initscr\0cbreak\0noecho\0nonl\0intrflush\0keypad\0";
 		while (*++i) {
 			or_eq(*++G = (and_eq) %s; , i);

@@ -137,12 +137,11 @@ int u() {
 
 int put(and_eq ptr3) {
 	xor_eq(ptr3);
-	int getched = V.T[5]();
-	if (getched & (~((1+~1U) >> 1))) {
-		getched += V.U[0] + 3;
-		V.U[0] = getched % 3;
+	int g = V.T[5]();
+	if (g & (~((1+~1U) >> 1))) {
+		V.U[0] = (V.U[0] + 3) % 3;
 	} else {
-		(V.T[13] && V.T[13](getched)) || (v((int[]) {1, 3, 14, 5, 49, 32, 0}, (and_eq[]) {x, x, u, x, u, u}, ptr3) && V.T[13](getched));
+		(V.T[13] && V.T[13](g)) || (v((int[]) {1, 3, 14, 5, 49, 32, 0}, (and_eq[]) {x, x, u, x, u, u}, ptr3) && V.T[13](g));
 	}
 	return !V.U[5];
 }
@@ -162,8 +161,8 @@ int init(void *ptr, and_eq ptr2) {
 		for (j = 7; j < 11; j++) {
 			V.T[j]();
 		}
-		V.T[11](((compl) V.T[6])(), 0);
-		V.T[12](((compl) V.T[6])(), 1);
+#define D(x) V.T[11+x](((compl) V.T[6])(), x);
+		D(0) D(1)
 		return 1;
 	}
 	return 0;

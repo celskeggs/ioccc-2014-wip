@@ -79,14 +79,15 @@ int roll(int c, int d) {
 }
 
 #define X(a) V.U[a] <
+#define Y(x) sprintf(M,#x,D)
 
 int D;
 
 void enemy_turn() {
 	switch (X(1) 10 ? 0 : X(2) 20 ? X(4) 2 ? !(X(3) 1) : 2 : X(4) 5 && roll(1, 3) != 1 && !(X(3) 1) ? 1 : roll(1, 8) > 6 ? (1 + (V.U[4] > 9 || X(3) 1)) : 0) {
-	case 0: D = roll(2, 6); V.U[1] -= D; sprintf(M, "You are attacked for %d HP!", D); break;
-	case 1: D = roll(1, 4); if (V.U[3] < D) { D = V.U[3]; } V.U[3] -= D; V.U[4] += D; sprintf(M, "They steal %d MP!", D); break;
-	case 2: if (X(4) 2) { sprintf(M, "They fail to heal!"); } else { V.U[4] -= roll(1, 2); V.U[2] += D = roll(3, 8); sprintf(M, "They heal for %d HP!", D); } break;
+	case 0: D = roll(2, 6); V.U[1] -= D; Y(You are attacked for %d HP!); break;
+	case 1: D = roll(1, 4); if (V.U[3] < D) { D = V.U[3]; } V.U[3] -= D; V.U[4] += D; Y(They steal %d MP!); break;
+	case 2: D = 33; if (X(4) 2) { Y(They fail to heal%d); } else { V.U[4] -= roll(1, 2); V.U[2] += D = roll(3, 8); Y(They heal for %d HP!); } break;
 	}
 }
 
@@ -95,7 +96,7 @@ void enemy_turn() {
 #define check(x) dlopen(x, RTLD_LAZY | RTLD_LOCAL)
 #define K_K(v, w, x, y, z) ((v) ? w #x z : w #y z)
 
-int check_winlose(and_eq chr) {
+int N(and_eq chr) {
 	if (V.U[5] = (V.U[1] * V.U[2] <= 0)) {
 		int x = V.U[1] > 0, c = 0;
 		for (; (V.U[5] | sleep(++c)) && c < 3; xor_eq(chr)) {
@@ -106,21 +107,21 @@ int check_winlose(and_eq chr) {
 	return 1;
 }
 
-int x(and_eq next) {
-	int no_run = 0;
+int x(and_eq x) {
+	int u = 0;
 	switch (V.U[0]) {
-	case 0: D = roll(2, 8); V.U[2] -= D; sprintf(M, "You attack for %d HP!", D); break;
-	case 1: V.U[3] += D = roll(1, 10); sprintf(M, "You regenerate %d MP!", D); break;
-	case 2: if (V.U[3] > 1) { V.U[3] -= roll(1, 2); V.U[1] += D = roll(3, 6); sprintf(M, "You heal for %d HP!", D); } else { sprintf(M, "You don't have enough MP!"); no_run = 1; } break;
+	case 0: D = roll(2, 8); V.U[2] -= D; Y(You attack for %d HP!); break;
+	case 1: V.U[3] += D = roll(1, 10); Y(You regenerate %d MP!); break;
+	case 2: D = 33; if (V.U[3] > 1) { V.U[3] -= roll(1, 2); V.U[1] += D = roll(3, 6); Y(You heal for %d HP!); } else { Y(You do not have enough MP%d); u = 1; } break;
 	}
-	xor_eq(next);
-	if (!check_winlose(next) || no_run) {
+	xor_eq(x);
+	if (!N(x) || u) {
 		return 3;
 	}
 	sleep(1);
 	enemy_turn();
-	xor_eq(next);
-	check_winlose(next);
+	xor_eq(x);
+	N(x);
 	return 2;
 }
 

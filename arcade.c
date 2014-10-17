@@ -2,15 +2,17 @@
 
 typedef int (*and_eq)();
 
-struct W {
+typedef struct {
 	and_eq T[15];
 	int U[6];
 	void *V;
-} V;
+} W;
 
 #include <string.h>
 #include <stdio.h>
-#define A(x) ((struct W *)x)->
+#define A(x) ((W *)x)->
+
+W V;
 
 #ifndef NO
 
@@ -25,8 +27,7 @@ typedef uintptr_t Q;
 #define not_eq(x, b) fprintf(q, x, b);
 #define or_eq(x, v) not_eq(#x, v)
 #define E(x, v, w) fprintf(q, #x, v, w);
-#define R(x, z) E(sprintf(d, "%%c", *A(%d)U == %s ? 126 : 32); , Z, #x) or_eq(A(%d)T, Z) not_eq("[3](%d,", o + 12) not_eq(" %d, d); ", a + z)
-#define Z (Q) &V
+#define R(x, z) or_eq(sprintf(d, "%%c", *V.U == %s ? 126 : 32); V.T, #x) not_eq("[3](%d,", o + 12) not_eq(" %d, d); ", a + z)
 #define F(x) x x
 #define H "THE LEMONLORD"
 #define B(x) V.U[x]
@@ -42,25 +43,21 @@ void xor_eq(and_eq L) {
 		return;
 	}
 	struct(
-	or_eq(int k() {A(%d)T[0]();, Z)
+	or_eq(int k() {V = *(W *)%d; V.T[0]();, (Q) &V)
 	char *x = "\0" F(F("--------") "-") "\0{                                } \0{                                } \0{                                } \0{                                } \0{  ==== ====          ==== ====  } \0{                                } \0{      O                  O      } \0{     /|->              <-|\\\\     } \0{      |                  |      } \0{     / \\\\                / \\\\     } \0{                                } \0{   ATTACK   REGENERATE   HEAL   } \0{                                } \0" F(F(F("----")) "-") "\0";
 	int o = b;
 	while (*++x) {
-		or_eq(A(%d), Z)
-		not_eq("T[3](%d,", b++)
+		not_eq("V.T[3](%d,", b++)
 		or_eq(%d, a)
 		not_eq(", \"%s\"); \n", x)
 		while (*++x);
 	}
-	or_eq(A(%d), Z)
-	not_eq("T[3](%d,", o+2)
+	not_eq("V.T[3](%d,", o+2)
 	or_eq(%d - strlen, a + 17)
 	E(((char*) %d) / 2 %c, (Q) M, 44)
 	E((char*%c %d); char d[12]; int y; , 41, (Q) M)
 	for (b=1; b<3; b++) {
-		or_eq(y=%d; ,b)
-		E(sprintf(d, "%%3dh%%3dMP", A(%d) U[y], A(%d) U[y+2]); , Z, Z)
-		or_eq(A(%d) T[3], Z)
+		or_eq(y=%d; sprintf(d, "%%3dh%%3dMP", V.U[y], V.U[y+2]); V.T[3] ,b)
 		E((%d, %d, d); , o + 4, a + b * 19 - 16)
 	}
 	R(0, 3)
@@ -69,8 +66,7 @@ void xor_eq(and_eq L) {
 	R(1, 23)
 	R(2, 25)
 	R(2, 30)
-	or_eq(A(%d) T[4](); } void bitand() { , Z)
-	or_eq(A(%d) T[14] = k; } , Z)
+	or_eq(V.T[4](); } void bitand() { A(%d)T[14] = k; }, (Q) &V)
 	, volatile, )
 	xor_eq(L);
 }
@@ -105,7 +101,7 @@ int x(and_eq x) {
 		return 3;
 	}
 	sleep(1);
-	switch (B(1) < 10 ? 0 : B(2) <  20 ? B(4) < 2 ? !(B(3) < 1) : 2 : B(4) < 5 && S(1, 3) != 1 && !(B(3) < 1) ? 1 : S(1, 8) > 6 ? (1 + (B(4) > 9 || B(3) <  1)) : 0) {
+	switch (B(1) < 10 ? 0 : B(2) < 20 ? B(4) < 2 ? B(3) >= 1 : 2 : B(4) < 5 && S(1, 3) != 1 && !(B(3) < 1) ? 1 : S(1, 8) > 6 && (B(3) || B(4) > 1) ? 1 + (B(4) > 9 || B(3) < 1) : 0) {
 	case 0: D = S(2, 6); B(1) -= D; Y(You are hit for %d HP!); break;
 	case 1: D = S(1, 4); if (B(3) < D) { D = B(3); } B(3) -= D; B(4) += D; Y(They steal %d MP!); break;
 	case 2: D = 33; B(4) -= S(1, 2); B(2) += D = S(3, 8); Y(They heal %d HP!); break;
@@ -122,7 +118,7 @@ int v(int p[], and_eq P[], and_eq L) {
 	while (*p) {
 		E(case %d: return ((and_eq) %d)(); , r += *(p++), (Q) *(P++));
 	}
-	or_eq(} return 1; } void bitand() { A(%d) T[13] = f; } , Z)
+	or_eq(} return 1; } void bitand() { A(%d) T[13] = f; } , (Q) &V)
 	, thread_local, )
 	return p[-2];
 }
@@ -143,13 +139,13 @@ void bitor(and_eq p) {
 
 void bitand(and_eq L) {
 	struct(
-	or_eq(#include <ncurses/ncurses.h>\nvoid F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() { and_eq *G = A(%d) T - 1; , Z);
+	or_eq(#include <ncurses/ncurses.h>\nvoid F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() { and_eq *G = A(%d) T - 1; , (Q) &V);
 	char *i = "\0clear\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0cbreak\0noecho\0nonl\0keypad\0";
 	while (*++i) {
 		or_eq(*++G = (and_eq) %s; , i);
 		while (*++i);
 	}
-	or_eq(initscr(); A(%d)V = stdscr; , Z)
+	or_eq(initscr(); A(%d)V = stdscr; , (Q) &V)
 	or_eq(atexit(%c); } , 70);
 	, static_assert, -lncurses)
 	int j = 6;

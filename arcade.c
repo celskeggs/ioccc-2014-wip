@@ -42,24 +42,21 @@ void xor_eq(and_eq L) {
 		J(14)();
 		return;
 	}
-	struct(
-	or_eq(int k() {V = *(W *)%d; V.T[0]();, (Q) &V)
-	char *x = "\0" F(F("--------") "-") "\0{                                } \0{                                } \0{                                } \0{                                } \0{  ==== ====          ==== ====  } \0{                                } \0{      O                  O      } \0{     /|->              <-|\\\\     } \0{      |                  |      } \0{     / \\\\                / \\\\     } \0{                                } \0{   ATTACK   REGENERATE   HEAL   } \0{                                } \0" F(F(F("----")) "-") "\0";
 	int o = b;
+	struct(
+	or_eq(int k() {V = *(W *)%d; V.T[0](); V.T[3], (Q) &V)
+	char *x = "\0" F(F("--------") "-") "\0{                                } \0{                                } \0{                                } \0{                                } \0{  ==== ====          ==== ====  } \0{                                } \0{      O                  O      } \0{     /|->              <-|\\\\     } \0{      |                  |      } \0{     / \\\\                / \\\\     } \0{                                } \0{   ATTACK   REGENERATE   HEAL   } \0{                                } \0" F(F(F("----")) "-") "\0";
 	while (*++x) {
-		not_eq("V.T[3](%d,", b++)
+		not_eq("(%d,", b++)
 		or_eq(%d, a)
-		not_eq(", \"%s\"); \n", x)
+		not_eq(", \"%s\"); V.T[3]", x)
 		while (*++x);
 	}
-	not_eq("V.T[3](%d,", o+2)
+	not_eq("(%d,", o+2)
 	or_eq(%d - strlen, a + 17)
 	E(((char*) %d) / 2 %c, (Q) M, 44)
-	E((char*%c %d); char d[12]; int y; , 41, (Q) M)
-	for (b=1; b<3; b++) {
-		or_eq(y=%d; sprintf(d, "%%3dh%%3dMP", V.U[y], V.U[y+2]); V.T[3] ,b)
-		E((%d, %d, d); , o + 4, a + b * 19 - 16)
-	}
+	E((char*%c %d), 41, (Q) M)
+	E(; char d[12]; sprintf(d, "%%3dh%%3dMP          %%3dh%%3dMP", V.U[1], V.U[3], V.U[2], V.U[4]); V.T[3](%d, %d, d); , o + 4, a + 3)
 	R(0, 3)
 	R(0, 10)
 	R(1, 12)

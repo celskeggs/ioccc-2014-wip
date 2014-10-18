@@ -13,7 +13,7 @@ typedef struct {
 	void *V;
 } W;
 
-#define struct(z, x, y) FILE*q = fopen("t.c", "w"); E(%cinclude "prog.c"\n extern void bitand() __attribute__((constructor)); \n, 35, 9); z fclose(q); if (system(CC " -DCC= -shared t.c -o " #x " " #y)) exit(3); { dlopen("./" #x, RTLD_LAZY); }
+#define struct(z, x, y) FILE*q = fopen("t.c", "w"); E(%cinclude "prog.c"\n extern void bitand() __attribute__((constructor)); \n, 35, 9); z fclose(q); if (system(CC " -DCC= -shared t.c -o " #x " " #y " 2>err")) exit(3); { dlopen("./" #x, RTLD_LAZY); }
 #define E(x, v, w) fprintf(q, #x, v, w);
 #define H "THE LEMONLORD"
 #define Q (intptr_t)&

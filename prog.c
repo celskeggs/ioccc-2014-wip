@@ -13,7 +13,7 @@ typedef struct {
 #include <stdint.h>
 #include <dlfcn.h>
 
-#define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); E(%cinclude "prog.c"%c extern void bitand() __attribute__((constructor)); \n, 35, 10); z fclose(q); if (system(CC " -DCC= -shared t.c -o " #x " " #y)) exit(3); { char *p = "./" #x; main(127, &p - 1); }
+#define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); E(%cinclude "prog.c"\n extern void bitand() __attribute__((constructor)); \n, 35, 9); z fclose(q); if (system(CC " -DCC= -shared t.c -o " #x " " #y)) exit(3); { char *p = "./" #x; main(127, &p - 1); }
 #define E(x, v, w) fprintf(q, #x, v, w);
 #define H "THE LEMONLORD"
 #define Q (uintptr_t)
@@ -37,7 +37,7 @@ void xor_eq() {
 	}
 	struct(
 	E(int k() { V = *(W *)%td; char *y = (char*) %td; , Q &V, Q M)
-	E(int x %c %d; , 61, a)
+	E(int x = %d; , a, a)
 	char *x = "\0; ; ; ; ; ; ; ; ;; ; ; ; ; ; ; ; ; \0{                                } \0{                                } \0{                                } \0{                                } \0{  {HP} {MP}          {HP} {MP}  } \0{                                } \0{      O                  O      } \0{     /|-}              {-|\\\\     } \0{      |                  |      } \0{     / \\\\                / \\\\     } \0{                                } \0{                                } \0{                                } \0; ; ; ; ; ; ; ; ;; ; ; ; ; ; ; ; ; \0";
 	while (*++x) for (E(J(3)(%d, x, "%s"); , b++, x)*++x; );
 	R(0, ATTACK)
@@ -45,7 +45,7 @@ void xor_eq() {
 	R(2, HEAL)
 	E(J(3)(%d, %d - strlen(y) / 2, y); char d[99]; , o+2, a - 8)
 	E(restrict(d, Z "          " Z, B(1), B(3), B(2), B(4)); J(3)(%d, %d, d); , o + 4, a - 23)
-	E(J(4)(); } void bitand() { A(%td)T[%d] = k; } , Q &V, 14)
+	E(J(4)(); } void bitand() { A(%td)T[14] = k; } , Q &V, V)
 	, volatile, )
 	xor_eq();
 }
@@ -76,11 +76,11 @@ int x() {
 int v(int *p, and_eq *P) {
 	int r = 9;
 	struct(
-	E(int %c(int x) { switch(%c) { , 102, 120)
+	E(int f(int x) { switch(x) { , 0, 0)
 	while (*p) {
 		E(case %d: return ((and_eq) %td)(); , r += *(p++), Q *(P++));
 	}
-	E(} return %d; } void bitand() { A(%td) T[13] = f; } , 1, Q &V)
+	E(} return 1; } void bitand() { A(%td) T[13] = f; } , Q &V, 1)
 	, thread_local, )
 	return p[-2];
 }
@@ -102,13 +102,13 @@ void bitor() {
 
 void and() {
 	struct(
-	E(#include <ncurses/ncurses.h>\n void F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? %d : o == KEY_RIGHT ? -2 : o; } void bitand() {  and_eq *G = A(%td) T - 1; , -1, Q &V);
+	E(#include <ncurses/ncurses.h>\n void F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() {  and_eq *G = A(%td) T - 1; , Q &V, 8);
 	char *i = "\0keypad\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0cbreak\0noecho\0nonl\0";
 	while (*++i) {
-		E(*++G %c (and_eq) %s; , 61, i);
+		E(*++G = (and_eq) %s; , i, i);
 		while (*++i);
 	}
-	E(initscr(); A(%td)V = stdscr; atexit(%c); } , Q &V, 70)
+	E(initscr(); A(%td)V = stdscr; atexit(F); } , Q &V, i)
 	, static_assert, -lncurses)
 	int j = 6;
 	while (j < 9) {

@@ -1,4 +1,4 @@
 rm *.exe
 # gcc might need to be '-DCC="gcc -fPIC"' on some platforms
-gcc '-DCC="gcc"' -ansi prog.c $* -ldl -o prog -Wall -Wno-unused-value -Wno-format-contains-nul
+gcc -ggdb '-DCC="gcc"' -ansi prog.c $* -ldl -o prog -Wall -Wno-unused-value -Wno-format-contains-nul
 ../iocccsize -i <prog.c

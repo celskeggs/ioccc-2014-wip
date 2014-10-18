@@ -10,31 +10,28 @@ typedef struct {
 
 #include <string.h>
 #include <stdio.h>
-#define A(x) ((W *)x)->
-#define Z "%3dh%3dMP"
-#define B(x) V.U[x]
-#define J(x) V.T[x]
-#define restrict sprintf
-
-W V;
-
-#ifndef NO
-
 #include <unistd.h>
 #include <stdlib.h>
 #include <stdint.h>
 #include <dlfcn.h>
 
-#define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); not_eq("%cinclude \""__FILE__"\"\nextern void bitand() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -shared t.c -o " #x " -DNO " #y)) exit(3); { char *p = "./" #x; L(127, &p - 1); }
+#define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); not_eq("%cinclude \""__FILE__"\"\nextern void bitand() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -shared t.c -o " #x " " #y)) exit(3); { char *p = "./" #x; L(127, &p - 1); }
 #define not_eq(x, b) fprintf(q, x, b);
 #define E(x, v, w) fprintf(q, #x, v, w);
 #define or_eq(x, v) not_eq(#x, v)
 #define H "THE LEMONLORD"
 #define Q (uintptr_t)
 #define O(x) = (J(x)(V.V) - 32 / x) / 2,
-#define R(x, y) E(J(3)(%d, %d, B(0) == x ? "[" #y "]" : " " #y); , o + 12, a += (3 + 5*x) | 1 )
+#define R(x, y) E(J(3)(%d, %d, B(0) == x ? "{" #y "} " : " " #y); , o + 12, a += (3 + 5*x) | 1 )
+#define A(x) ((W *)x)->
+#define Z "%3dh%3dMP"
+#define B(x) V.U[x]
+#define J(x) V.T[x]
+#define restrict sprintf
 
 char M[99] = " { { DEFEAT "H" } } ";
+
+W V;
 
 void xor_eq(and_eq L) {
 	int a O(1) b O(2) o = b;
@@ -105,13 +102,14 @@ void bitor(and_eq p) {
 	if (g & (~((1+~1U) >> 1))) {
 		B(0) = (B(0) + g + 3) % 3;
 	} else {
-		(J(13) || v((int[]) { 1, 3, 14, 5, 49, 32, 0} , (and_eq[]) { x, x, u, x, u, u} , p)) && J(13)(g);
+		J(13) || v((int[]) { 1, 3, 14, 5, 49, 32, 0} , (and_eq[]) { x, x, u, x, u, u} , p);
+		J(13)(g);
 	}
 }
 
-void bitand(and_eq L) {
+void and(and_eq L) {
 	struct(
-	or_eq(#include <ncurses.h>\nvoid F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() { puts("HELLO WORLD"); and_eq *G = A(%td) T - 1; , Q &V);
+	or_eq(#include <ncurses/ncurses.h>\nvoid F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() {  and_eq *G = A(%td) T - 1; , Q &V);
 	char *i = "\0keypad\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0cbreak\0noecho\0nonl\0";
 	while (*++i) {
 		or_eq(*++G = (and_eq) %s; , i);
@@ -135,9 +133,7 @@ int main(int c, char *v[]) {
 		dlopen(v[1], RTLD_LAZY);
 	} else {
 		memcpy(V.U, (int[]) { 0, 5, 5, 5, 10, 0} , 6 * sizeof(int));
-		bitand(&main);
+		and(&main);
 	}
 	return 0;
 }
-
-#endif

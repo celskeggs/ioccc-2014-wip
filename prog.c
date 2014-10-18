@@ -92,7 +92,7 @@ int u() {
 int main(int j, char **v) {
 	srand(time(0));
 	struct(
-	E(#include <ncurses/ncurses.h>\n void F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() {  and_eq *G = A(%td) T - 1; , Q V, 8);
+	E(#include <ncurses.h>\n void F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() {  and_eq *G = A(%td) T - 1; , Q V, 8);
 	char *i = "\0keypad\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0cbreak\0noecho\0nonl\0";
 	memcpy(V.U, (int[6]) { 0, 30, 50, 5, 10, 0} , 6 * sizeof(int));
 	while (*++i) {

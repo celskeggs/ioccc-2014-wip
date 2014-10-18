@@ -1,3 +1,4 @@
 rm *.exe
-gcc -ansi arcade.c $* -ldl -o arcade -Wall -Wno-unused-value -Wno-format-contains-nul
+# gcc might need to be '-DCC="gcc -fPIC"' on some platforms
+gcc '-DCC="gcc"' -ansi arcade.c $* -ldl -o arcade -Wall -Wno-unused-value -Wno-format-contains-nul
 ../iocccsize -i <arcade.c

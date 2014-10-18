@@ -13,10 +13,9 @@ typedef struct {
 #include <stdint.h>
 #include <dlfcn.h>
 
-#define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); not_eq("%cinclude \""__FILE__"\"\nextern void bitand() __attribute__((constructor)); \n", 35); z fclose(q); if (system(CC " -DCC= -shared t.c -o " #x " " #y)) exit(3); { char *p = "./" #x; L(127, &p - 1); }
-#define not_eq(x, b) fprintf(q, x, b);
+#define struct(z, x, y) FILE*q = fopen("t.c", "w"); if (q == NULL) exit(2); or_eq(%cinclude "prog.c"\n extern void bitand() __attribute__((constructor)); \n, 35); z fclose(q); if (system(CC " -DCC= -shared t.c -o " #x " " #y)) exit(3); { char *p = "./" #x; main(127, &p - 1); }
 #define E(x, v, w) fprintf(q, #x, v, w);
-#define or_eq(x, v) not_eq(#x, v)
+#define or_eq(x, v) fprintf(q, #x, v);
 #define H "THE LEMONLORD"
 #define Q (uintptr_t)
 #define O(x) = (J(x)(V.V) - 32 / x) / 2,
@@ -31,7 +30,7 @@ char M[99] = " { { DEFEAT "H" } } ";
 
 W V;
 
-void xor_eq(and_eq L) {
+void xor_eq() {
 	int a O(1) b O(2) o = b;
 	if (J(14)) {
 		J(14)();
@@ -49,33 +48,33 @@ void xor_eq(and_eq L) {
 	E(restrict(d, Z "          " Z, B(1), B(3), B(2), B(4)); J(3)(%d, %d, d); , o + 4, a - 23)
 	or_eq(J(4)(); } void bitand() { A(%td)T[14] = k; }, Q &V)
 	, volatile, )
-	xor_eq(L);
+	xor_eq();
 }
 
 #define S(x) 1 + rand() % (x)
 #define Y(x) restrict(M,#x,D)
 
-void N(and_eq d) {
+void N() {
 	int c = 0;
-	xor_eq(d);
+	xor_eq();
 	if (B(5) = (B(1) * B(2) < 1)) {
-		for (; !sleep(++c) && c < 3; xor_eq(d)) {
+		for (; !sleep(++c) && c < 3; xor_eq()) {
 			char *D = ((B(1) < 1) + c) & 1 ? H " has" : "You have";
 			c & 1 ? Y(%s died!) : Y(%s won!);
 		}
 	}
 }
 
-#define X(a, n, b, g, f) switch (B(n) a) { case 0: D = S(16 - 4*n); B(2-n) -= D; Y(b hit for %d!); break; case 1: D = S(10-6*n); g; B(3+n) += D; Y(b f %d MP!); break; case 2: D = 33; if (B(3+n) > 1) { B(3+n) -= S(2); B(1+n) += D = S(18 + 6*n); Y(b heal %d!); } else { Y(b need more MP%c); u = 1; } break; } N(x); if (B(5) | u | n) { return 2; }
+#define X(a, n, b, g, f) switch (B(n) a) { case 0: D = S(16 - 4*n); B(2-n) -= D; Y(b hit for %d!); break; case 1: D = S(10-6*n); g; B(3+n) += D; Y(b f %d MP!); break; case 2: D = 33; if (B(3+n) > 1) { B(3+n) -= S(2); B(1+n) += D = S(18 + 6*n); Y(b heal %d!); } else { Y(b need more MP%c); u = 1; } break; } N(); if (B(5) | u | n) { return 2; }
 
-int x(and_eq x) {
+int x() {
 	int u = 0, D;
 	X(, 0, You, , gain)
 	sleep(1);
 	X(< 9 ? 0 : B(2) < 20 ? B(4) < 2 ? B(3) >= 1 : 2 : B(4) < 5 && S(3) != 1 && !(B(3) < 1) ? 1 : S(8) > 6 && (B(3) || B(4) > 1) ? 1 + (B(4) > 9 || B(3) < 1) : 0, 1, They, if (B(3) < D) { D = B(3); } B(3) -= D, steal)
 }
 
-int v(int *p, and_eq *P, and_eq L) {
+int v(int *p, and_eq *P) {
 	int r = 9;
 	struct(
 	or_eq(int f(int x) { switch(%c) { , 120)
@@ -87,24 +86,24 @@ int v(int *p, and_eq *P, and_eq L) {
 	return p[-2];
 }
 
-int u(and_eq x) {
+int u() {
 	return B(5) = 1;
 }
 
-void bitor(and_eq p) {
-	xor_eq(p);
+void bitor() {
+	xor_eq();
 	int g = J(5)();
 	if (g & (~((1+~1U) >> 1))) {
 		B(0) = (B(0) + g + 3) % 3;
 	} else {
-		J(13) || v((int[]) { 1, 3, 14, 5, 49, 32, 0} , (and_eq[]) { x, x, u, x, u, u} , p);
+		J(13) || v((int[]) { 1, 3, 14, 5, 49, 32, 0} , (and_eq[]) { x, x, u, x, u, u});
 		J(13)(g);
 	}
 }
 
-void and(and_eq L) {
+void and() {
 	struct(
-	or_eq(#include <ncurses/ncurses.h>\nvoid F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() {  and_eq *G = A(%td) T - 1; , Q &V);
+	or_eq(#include <ncurses/ncurses.h>\n void F() { endwin(); puts("Play again?"); } int g() { int o = getch(); return o == KEY_LEFT ? -1 : o == KEY_RIGHT ? -2 : o; } void bitand() {  and_eq *G = A(%td) T - 1; , Q &V);
 	char *i = "\0keypad\0getmaxx\0getmaxy\0mvaddstr\0refresh\0g\0cbreak\0noecho\0nonl\0";
 	while (*++i) {
 		or_eq(*++G = (and_eq) %s; , i);
@@ -118,7 +117,7 @@ void and(and_eq L) {
 		J(j++)();
 	}
 	J(0)(V.V, 1);
-	for (; !B(5); bitor(L));
+	for (; !B(5); bitor());
 }
 
 int main(int c, char **v) {
@@ -128,7 +127,7 @@ int main(int c, char **v) {
 		dlopen(v[1], RTLD_LAZY);
 	} else {
 		memcpy(V.U, (int[]) { 0, 5, 5, 5, 10, 0} , 6 * sizeof(int));
-		and(&main);
+		and();
 	}
 	return 0;
 }
